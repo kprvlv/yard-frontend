@@ -1,10 +1,13 @@
 body {
-  background-color: #eaebf0;
-  background-image: url(img/background.png);
-  background-size: 20px 10px;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased;
   -webkit-line-break: after-white-space;
+}
+
+.body-pattern {
+  background-image: url(img/background.png);
+  background-size: 20px 10px;
+  background-color: #eaebf0;
 }
 
 html {
@@ -22,14 +25,14 @@ html {
   align-items: center;
 }
 
-.compass-logo {
+.main-header-logo {
   width: 179.1px;
   height: 24px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-p, h2, h3, h4 {
+p, h1, h2, h3, h4 {
   margin: 0;
 }
 
@@ -39,7 +42,7 @@ a {
   text-decoration: none;
 }
 
-.navmenu {
+.main-header-navmenu {
   line-height: 16px;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -53,11 +56,7 @@ a {
   text-decoration: none;
 }
 
-.buy {
-  margin-right: 32px;
-}
-
-.rent {
+.navmenu-link:not(:last-child) {
   margin-right: 32px;
 }
 
@@ -69,6 +68,7 @@ a {
   padding-top: 80px;
   padding-bottom: 80px;
   width: auto;
+  margin-bottom: 64px;
 }
 
 .class-development-logo {
@@ -79,35 +79,32 @@ a {
 }
 
 .description {
-  text-align: center;   
+  text-align: center;
+  color: #3e4247;
   margin-bottom: 64px;
-  margin-top: 64px;
-  margin-left: 328px;
-  margin-right: 328px;
 }
 
 .description-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3e4247;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-bottom: 8px;
 }
 
 .description-text {
-  color: #3e4247;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 .description-button {
-  background-color: black;
-  color: white;
-  border-style: none;
+  background-color: #000;
+  border: none;
   border-radius: 2px;
-  padding: 12px 32px 12px 32px;
-  text-align: center;
-  line-height: 1;
-  font-family: "Fira Sans", sans-serif;
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 12px 32px;
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .card {
@@ -117,28 +114,30 @@ a {
   margin-bottom: 48px;
 }
 
-.card-bitmap {
+.card-image {
   width: 484px;
   height: 350px;
 }
 
 .card-description {
-  display: flex;
-  flex-flow: column;
-  padding: 24px 100px 0 16px;
+  display: block;
+  padding-left: 16px;
+  padding-right: 100px;
   border-bottom: solid 2px #646971;
-  max-width: 698px;
 }
 
 .card-location {
+  display: block;
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   font-size: 16px;
   text-align: left;
   color: #646971;
   height: 20px;
+  margin-top: 24px;
 }
 
 .card-title {
+  display: block;
   font-size: 40px;
   font-weight: bold;
   line-height: 1.4;
@@ -148,6 +147,7 @@ a {
 }
 
 .card-text {
+   display: block;
   line-height: 1.5;
   text-align: left;
   color: #3e4247;
@@ -172,7 +172,7 @@ a {
   margin-left: 0;
 }
 
-.footer-h4 {
+.footer-title {
   height: 22px;
   font-size: 14px;
   font-weight: bold;
@@ -182,9 +182,9 @@ a {
   margin-bottom: 8px;
 }
 
-.footer-p {
+.footer-info {
   display: block;
-  height: 22px;
+  line-height: 20px;
   font-size: 14px;
   font-weight: 300;
   text-align: left;
@@ -195,7 +195,7 @@ a {
 .footer-link {
   display: block;
   text-decoration: none; 
-  height: 22px;
+  line-height: 20px;
   font-size: 14px;
   font-weight: 300;
   text-align: left;
@@ -219,11 +219,319 @@ a {
   margin-top: 16px;
 }
 
-.footer-text {
+.footer-disclaimer {
   margin-top: 96px;
   font-size: 11px;
   font-weight: 300;
   text-align: left;
   line-height: 1.15rem;
   color: #a9afb6;
+}
+
+
+/* complex.html styles*/
+
+.complex-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px #eaebf0;
+}
+
+.complex-header-text {
+  display: block;
+}
+
+.complex-header-button {
+  margin-bottom: 56px;
+  background-color: white;
+  color: #00779a;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1; 
+  padding: 8px 16px;
+  border-radius: 2px;
+  border: solid 1px #e0e0e1;
+  padding: 8px 16px;
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 24px;
+}
+
+.complex-header {
+  background-color: white;
+}
+
+.complex-header-title {
+  font-family: "Philosopher";
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  color: #3e4247;
+  line-height: 45px;
+}
+
+.complex-header-location {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 20px;
+  color: #a9afb6;
+}
+
+.gallery-slider {
+  display: flex;
+  overflow-x: auto;
+}
+
+.gallery-slider-image {
+  height: 400px;
+  object-fit: contain;
+}
+
+.gallery-slider-button {
+  position: absolute;
+  border-radius: 2px;
+  background-color: #00779a;
+  font-family: "Fira Sans";
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: #ffffff;
+  border-radius: 2px;
+  margin-top: 358px;
+  margin-bottom: -28px;
+  margin-left: 128px;
+  padding: 8px 16px;
+  border-style: none;
+}
+
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.main-title {
+  display: block;
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  color: #3e4247;
+  margin-right: 48px;
+  line-height: 34px;
+}
+
+.main-small {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #a9afb6;
+  line-height: 34px;
+}
+
+.features {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.features-title {
+  display: block;
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  color: #3e4247;
+  margin-right: 48px;
+  line-height: 34px;
+}
+
+
+.features dl {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.4px;
+  text-align: left;
+  color: #3e4247;
+}
+
+.features dt {
+  font-family: "Fira Sans";
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 22px;
+  color: #a9afb6;
+  width: 50%;
+}
+
+.features dd {
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #3e4247;
+  margin-left: 48px;
+  width: 50%;
+}
+
+.complex-description-title {
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: left;
+  color: #3e4247;
+  padding-top: 0;
+}
+
+.complex-description-text {
+  font-size: 16px;
+  text-align: left;
+  color: #3e4247;
+  font-weight: 400;
+  white-space: pre-line;
+  text-indent: 0;
+  line-height: 1.56;
+}
+
+.infrastructure {
+  margin-top: 32px;
+  border-top: solid 1px #eaebf0;
+}
+
+.infrastructure-title {
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: left;
+  color: #3e4247;
+}
+
+.infrastructure-wrapper {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.infrastructure-text {
+  font-size: 16px;
+  text-align: left;
+  color: #3e4247;
+  margin-bottom: 8px;
+  line-height: 25px;
+}
+
+.offers {
+  background-color: #f4f5f9;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.offers-title {
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: left;
+  color: #3e4247;
+  margin-bottom: 24px;
+}
+
+.offers-list-wrapper {
+  padding: 24px 32px;
+  background-color: white;
+}
+
+.offers-list-block {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.offers-list-title {
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: left;
+  color: #3e4247; 
+}
+
+.offers-list-block-title {   
+  font-size: 16px;
+  color: #a9afb6;
+  margin-bottom: 8px;
+}
+
+.offers-list-text {
+  margin: 0;
+  font-size: 16px;
+  color: #3e4247;
+  line-height: 25px;
+}
+
+.offers-list-button {
+  background-color: black;
+  color: white;
+  border-style: none;
+  border-radius: 2px;
+  padding: 12px 32px;
+  text-align: center;
+  line-height: 16px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.nearby {
+  background-color: #3e4247;
+  padding-top: 64px;
+  padding-bottom: 218px;
+}
+
+.nearby-title {
+  color: #a9afb6;
+  font-family: "Philosopher";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: left;
+}
+
+.nearby-text {
+  font-family: 'Philosopher';
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 60px;
+  color: #ffffff;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.nearby-link {
+  text-decoration: none;
+  color: #00779a;
+}
+
+.arrow-link {
+  width: 8.8px;
+  height: 8px;
+  object-fit: contain;
+  margin-left: 8px;
+}
+
+.nearby-image {
+  width: 583px;
+  height: 560px;
+  object-fit: contain;
 }
