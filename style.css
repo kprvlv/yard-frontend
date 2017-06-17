@@ -132,8 +132,8 @@ a {
   font-size: 16px;
   text-align: left;
   color: #646971;
-  height: 20px;
   margin-top: 24px;
+  line-height: 1.25;
 }
 
 .card-title {
@@ -147,7 +147,7 @@ a {
 }
 
 .card-text {
-   display: block;
+  display: block;
   line-height: 1.5;
   text-align: left;
   color: #3e4247;
@@ -170,16 +170,27 @@ a {
 .footer-border {
   border: solid 1px #3e4247;
   margin-left: 0;
+  margin-top: 0;
 }
 
 .footer-title {
-  height: 22px;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
   color: #646971;
   margin-top: 16px;
   margin-bottom: 8px;
+  line-height: 20px;
+}
+
+.footer-title-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  color: #646971;
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 20px;
 }
 
 .footer-info {
@@ -521,13 +532,6 @@ a {
 .nearby-link {
   text-decoration: none;
   color: #00779a;
-}
-
-.arrow-link {
-  width: 8.8px;
-  height: 8px;
-  object-fit: contain;
-  margin-left: 8px;
 }
 
 .nearby-image {
