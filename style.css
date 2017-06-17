@@ -252,6 +252,28 @@ a {
   display: block;
 }
 
+.complex-header {
+  background-color: white;
+}
+
+.complex-header-title {
+  font-family: "Philosopher";
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  color: #3e4247;
+  line-height: 1.13;
+}
+
+.complex-header-location {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.57;
+  color: #a9afb6;
+}
+
 .complex-header-button {
   margin-bottom: 56px;
   background-color: white;
@@ -266,28 +288,6 @@ a {
   padding: 8px 16px;
   font-family: "Fira Sans", sans-serif;
   margin-top: 24px;
-}
-
-.complex-header {
-  background-color: white;
-}
-
-.complex-header-title {
-  font-family: "Philosopher";
-  font-size: 32px;
-  font-weight: bold;
-  text-align: left;
-  color: #3e4247;
-  line-height: 45px;
-}
-
-.complex-header-location {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  text-align: left;
-  line-height: 20px;
-  color: #a9afb6;
 }
 
 .complex-gallery {
@@ -311,13 +311,10 @@ a {
   text-align: left;
   color: #ffffff;
   border-radius: 2px;
-  margin-top: 358px;
-  margin-bottom: -28px;
-  margin-left: 128px;
+  margin-top: -2.625rem;
   padding: 8px 16px;
   border-style: none;
 }
-
 
 .complex-summary-header {
   display: flex;
@@ -334,7 +331,7 @@ a {
   text-align: left;
   color: #3e4247;
   margin-right: 48px;
-  line-height: 34px;
+  line-height: 1.13;
 }
 
 .summary-header-text {
@@ -344,7 +341,7 @@ a {
   font-weight: 300;
   text-align: left;
   color: #a9afb6;
-  line-height: 34px;
+  line-height: 1.57;
 }
 
 .complex-features {
@@ -362,7 +359,7 @@ a {
   text-align: left;
   color: #3e4247;
   margin-right: 48px;
-  line-height: 34px;
+  line-height: 1.13;
 }
 
 
@@ -372,7 +369,6 @@ a {
   font-family: "Fira Sans";
   font-size: 16px;
   font-weight: 500;
-  line-height: 18.4px;
   text-align: left;
   color: #3e4247;
 }
@@ -382,7 +378,7 @@ a {
   font-size: 16px;
   text-align: left;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.38;
   color: #a9afb6;
   width: 50%;
 }
@@ -395,13 +391,14 @@ a {
   color: #3e4247;
   margin-left: 48px;
   width: 50%;
+  line-height: 1.56;
 }
 
 .complex-description-title {
   font-family: "Philosopher";
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 1.13;
   text-align: left;
   color: #3e4247;
   padding-top: 0;
@@ -427,7 +424,7 @@ a {
   font-family: "Philosopher";
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 1.13;
   text-align: left;
   color: #3e4247;
 }
@@ -442,7 +439,7 @@ a {
   text-align: left;
   color: #3e4247;
   margin-bottom: 8px;
-  line-height: 25px;
+  line-height: 1.38;
 }
 
 .offers {
@@ -457,7 +454,7 @@ a {
   font-family: "Philosopher";
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 1.13;
   text-align: left;
   color: #3e4247;
   margin-bottom: 24px;
@@ -477,7 +474,7 @@ a {
   font-family: "Philosopher";
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 1.1;
   text-align: left;
   color: #3e4247; 
 }
@@ -485,14 +482,15 @@ a {
 .offers-list-block-title {   
   font-size: 16px;
   color: #a9afb6;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.38;
 }
 
 .offers-list-text {
   margin: 0;
   font-size: 16px;
   color: #3e4247;
-  line-height: 25px;
+  line-height: 1.38;
 }
 
 .offers-list-button {
@@ -502,7 +500,7 @@ a {
   border-radius: 2px;
   padding: 12px 32px;
   text-align: center;
-  line-height: 16px;
+  line-height: 1;
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -525,7 +523,7 @@ a {
   font-family: 'Philosopher';
   font-size: 48px;
   font-weight: bold;
-  line-height: 60px;
+  line-height: 1.25;
   color: #ffffff;
   margin-top: 48px;
   margin-bottom: 48px;
@@ -550,8 +548,8 @@ a {
 }
 
 .complex-location {
-  margin-top: -9.625rem;
-  margin-bottom: 32px;
+  margin-top: -150.5px;
+  margin-bottom: 64.5px;
 }
 
 .complex-map {
@@ -568,12 +566,12 @@ a {
 
 .complex-location-duration {
   margin-top: 8px;
-  line-height: 22px;
+  line-height: 1.38;
   color: #a9afb6;
 }
 
 .complex-location-name {
-  line-height: 22px;
+  line-height: 1.38;
   font-weight: 500;
   color: #3e4247;
 }
