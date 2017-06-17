@@ -42,21 +42,21 @@ a {
   text-decoration: none;
 }
 
-.main-header-navmenu {
+.main-header-nav {
   line-height: 16px;
   margin-top: 24px;
   margin-bottom: 24px;
   margin-left: 0
 }
 
-.navmenu-link {
+.main-header-nav-link {
   text-decoration: none;
   color: #3e4247;
   line-height: 16px;
   text-decoration: none;
 }
 
-.navmenu-link:not(:last-child) {
+.main-header-nav-link:not(:last-child) {
   margin-right: 32px;
 }
 
@@ -239,7 +239,6 @@ a {
   color: #a9afb6;
 }
 
-
 /* complex.html styles*/
 
 .complex-header-wrapper {
@@ -291,17 +290,17 @@ a {
   color: #a9afb6;
 }
 
-.gallery-slider {
+.complex-gallery {
   display: flex;
   overflow-x: auto;
 }
 
-.gallery-slider-image {
+.complex-gallery-image {
   height: 400px;
   object-fit: contain;
 }
 
-.gallery-slider-button {
+.complex-gallery-button {
   position: absolute;
   border-radius: 2px;
   background-color: #00779a;
@@ -320,14 +319,14 @@ a {
 }
 
 
-.main {
+.complex-summary-header {
   display: flex;
   justify-content: flex-start;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
-.main-title {
+.summary-header-title {
   display: block;
   font-family: "Philosopher";
   font-size: 24px;
@@ -338,7 +337,7 @@ a {
   line-height: 34px;
 }
 
-.main-small {
+.summary-header-text {
   display: block;
   font-family: "Fira Sans", sans-serif;
   font-size: 14px;
@@ -348,12 +347,14 @@ a {
   line-height: 34px;
 }
 
-.features {
-  margin-top: 32px;
+.complex-features {
+  margin-top: 24px;
   margin-bottom: 48px;
+  padding-top: 32px;
+  border-top: solid 1px #eaebf0;
 }
 
-.features-title {
+.complex-features-title {
   display: block;
   font-family: "Philosopher";
   font-size: 24px;
@@ -365,7 +366,7 @@ a {
 }
 
 
-.features dl {
+.features-block {
   display: flex;
   justify-content: space-between;
   font-family: "Fira Sans";
@@ -376,7 +377,7 @@ a {
   color: #3e4247;
 }
 
-.features dt {
+.features-block-title {
   font-family: "Fira Sans";
   font-size: 16px;
   text-align: left;
@@ -386,7 +387,7 @@ a {
   width: 50%;
 }
 
-.features dd {
+.features-block-text {
   font-family: "Fira Sans";
   font-size: 16px;
   font-weight: 500;
@@ -417,6 +418,7 @@ a {
 }
 
 .infrastructure {
+  padding-top: 32px;
   margin-top: 32px;
   border-top: solid 1px #eaebf0;
 }
@@ -431,7 +433,7 @@ a {
 }
 
 .infrastructure-wrapper {
-  padding-top: 56px;
+  padding-top: 16px;
   padding-bottom: 56px;
 }
 
@@ -504,22 +506,22 @@ a {
   font-family: "Fira Sans", sans-serif;
 }
 
-.nearby {
+.complex-nearby {
   background-color: #3e4247;
   padding-top: 64px;
   padding-bottom: 218px;
 }
 
-.nearby-title {
-  color: #a9afb6;
+.complex-nearby-title {
   font-family: "Philosopher";
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 27px;
   text-align: left;
+  color: #a9afb6;
 }
 
-.nearby-text {
+.complex-nearby-text {
   font-family: 'Philosopher';
   font-size: 48px;
   font-weight: bold;
@@ -529,13 +531,53 @@ a {
   margin-bottom: 48px;
 }
 
-.nearby-link {
+.complex-nearby-link {
   text-decoration: none;
+  font-family: 'Fira Sans';
+  font-size: 16px;
   color: #00779a;
 }
 
-.nearby-image {
-  width: 583px;
-  height: 560px;
+.complex-nearby-link-arrow {
+  width: 8.8px;
+  height: 8px;
   object-fit: contain;
+  margin-left: 8px;
+}
+
+.complex-nearby-image {
+  width: 100%;
+}
+
+.complex-location {
+  margin-top: -9.625rem;
+  margin-bottom: 32px;
+}
+
+.complex-map {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 303px;
+}
+
+.complex-location-content {
+  padding: 24px;
+  background-color: white;
+  border-bottom: solid 1px #e0e0e1;
+}
+
+.complex-location-duration {
+  margin-top: 8px;
+  line-height: 22px;
+  color: #a9afb6;
+}
+
+.complex-location-name {
+  line-height: 22px;
+  font-weight: 500;
+  color: #3e4247;
+}
+
+.complex-location-content-list {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 }
