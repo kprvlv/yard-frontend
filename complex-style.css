@@ -31,7 +31,7 @@ button {
   text-align: left;
   color: #3e4247;
   line-height: 1;
-  margin-top: 0;
+  margin-top: 24px;
   margin-bottom: 1rem;
 }
 
@@ -43,7 +43,7 @@ button {
   line-height: 1.2;
   color: #a9afb6;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .complex-header-button {
@@ -90,7 +90,7 @@ button {
 .complex-summary-header {
   display: flex;
   justify-content: flex-start;
-  margin-top: 24px;
+  margin-top: 16px;
   margin-bottom: 18px;
 }
 
