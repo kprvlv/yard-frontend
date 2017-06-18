@@ -291,7 +291,7 @@ a {
 
 .complex-gallery {
   display: flex;
-  overflow-x: auto;
+  overflow: none;
 }
 
 .complex-gallery-image {
