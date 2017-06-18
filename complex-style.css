@@ -5,11 +5,14 @@ body {
   background-color: white;
 }
 
+.complex-header-border {
+  border-bottom: solid 1px #eaebf0;
+}
+
 .complex-header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: solid 1px #eaebf0;
 }
 
 .complex-header-text {
@@ -60,7 +63,7 @@ body {
 
 .complex-gallery {
   display: flex;
-  overflow: none;
+  overflow-x: auto;
 }
 
 .complex-gallery-image {
@@ -336,7 +339,9 @@ body {
 }
 
 .complex-nearby-image {
-  width: 100%;
+  width: 583px;
+  height: 560px;
+    
 }
 
 .complex-location {
