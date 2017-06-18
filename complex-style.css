@@ -91,7 +91,6 @@ button {
   display: flex;
   justify-content: flex-start;
   margin-top: 16px;
-  margin-bottom: 18px;
 }
 
 .summary-header-title {
@@ -117,13 +116,11 @@ button {
   color: #a9afb6;
   line-height: 1;
   padding-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 24px;
 }
 
 .complex-features {
-  margin-top: 8px;
   margin-bottom: 32px;
-  padding-top: 32px;
   border-top: solid 1px #eaebf0;
 }
 
@@ -136,7 +133,7 @@ button {
   color: #3e4247;
   margin-right: 48px;
   line-height: 1;
-  margin-top: 0.5rem;
+  margin-top: 32px;
   margin-bottom: 0.5rem;
   padding-bottom: 0;
 }
@@ -213,13 +210,13 @@ button {
   text-align: left;
   color: #3e4247;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   padding-bottom: 0;
 }
 
 .infrastructure-wrapper {
   padding-top: 16px;
-  padding-bottom: 56px;
+  padding-bottom: 64px;
 }
 
 .infrastructure-text {
