@@ -5,23 +5,14 @@ body {
   background-color: white;
 }
 
-<<<<<<< HEAD
 .complex-header-border {
   border-bottom: solid 1px #eaebf0;
-=======
-button {
-  background-color: white;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-=======
-  border-top: solid 1px #eaebf0;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-header-text {
@@ -39,11 +30,7 @@ button {
   text-align: left;
   color: #3e4247;
   line-height: 1;
-<<<<<<< HEAD
   margin-top: 24px;
-=======
-  margin-top: 0;
->>>>>>> add complex-style.css, fix class names and paddings
   margin-bottom: 1rem;
 }
 
@@ -55,11 +42,7 @@ button {
   line-height: 1.2;
   color: #a9afb6;
   margin-top: 0;
-<<<<<<< HEAD
   margin-bottom: 16px;
-=======
-  margin-bottom: 8px;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-header-button {
@@ -68,17 +51,14 @@ button {
   text-align: left;
   font-size: 10px;
   font-weight: 300;
-  line-height: 1; 
+  line-height: 1;
   padding: 8px 16px;
   border-radius: 2px;
   border: solid 1px #e0e0e1;
   padding: 8px 16px;
   font-family: "Fira Sans", sans-serif;
   margin-top: 24px;
-<<<<<<< HEAD
   background-color: white;
-=======
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-gallery {
@@ -110,12 +90,7 @@ button {
 .complex-summary-header {
   display: flex;
   justify-content: flex-start;
-<<<<<<< HEAD
   margin-top: 16px;
-=======
-  margin-top: 24px;
-  margin-bottom: 18px;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .summary-header-title {
@@ -126,15 +101,9 @@ button {
   text-align: left;
   color: #3e4247;
   margin-right: 48px;
-<<<<<<< HEAD
   line-height: 1.13;
   margin-top: 0.5rem;
   margin-bottom: 0;
-=======
-  line-height: 1;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
->>>>>>> add complex-style.css, fix class names and paddings
   padding-bottom: 0;
 }
 
@@ -145,7 +114,6 @@ button {
   font-weight: 300;
   text-align: left;
   color: #a9afb6;
-<<<<<<< HEAD
   line-height: 1.57;
   padding-top: 1rem;
   margin-bottom: 24px;
@@ -153,17 +121,6 @@ button {
 
 .complex-features {
   margin-bottom: 48px;
-=======
-  line-height: 1;
-  padding-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.complex-features {
-  margin-top: 8px;
-  margin-bottom: 32px;
-  padding-top: 32px;
->>>>>>> add complex-style.css, fix class names and paddings
   border-top: solid 1px #eaebf0;
 }
 
@@ -175,21 +132,12 @@ button {
   text-align: left;
   color: #3e4247;
   margin-right: 48px;
-<<<<<<< HEAD
   line-height: 1.13;
   margin-top: 32px;
-=======
-  line-height: 1;
-  margin-top: 0.5rem;
->>>>>>> add complex-style.css, fix class names and paddings
   margin-bottom: 0.5rem;
   padding-bottom: 0;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> add complex-style.css, fix class names and paddings
 .features-block {
   display: flex;
   justify-content: space-between;
@@ -198,11 +146,7 @@ button {
   font-weight: 500;
   text-align: left;
   color: #3e4247;
-<<<<<<< HEAD
   margin-top: 11px;
-=======
-  margin-top: 0.5rem;
->>>>>>> add complex-style.css, fix class names and paddings
   margin-bottom: 0;
 }
 
@@ -211,19 +155,11 @@ button {
   font-size: 16px;
   text-align: left;
   font-weight: 400;
-<<<<<<< HEAD
   line-height: 1.38;
   color: #a9afb6;
   width: 50%;
   margin-top: 0rem;
   margin-bottom: 0;
-=======
-  line-height: 1.56;
-  color: #a9afb6;
-  width: 50%;
-  margin-top: 0rem;
-  margin-bottom: 0.25em;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .features-block-text {
@@ -241,21 +177,12 @@ button {
   font-family: "Philosopher";
   font-size: 24px;
   font-weight: bold;
-<<<<<<< HEAD
   line-height: 1.13;
   text-align: left;
   color: #3e4247;
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 0;
-=======
-  line-height: 1;
-  text-align: left;
-  color: #3e4247;
-  padding-top: 0;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-description-text {
@@ -263,23 +190,13 @@ button {
   text-align: left;
   color: #3e4247;
   font-weight: 400;
-<<<<<<< HEAD
   margin-top: 0;
   margin-bottom: 24px;
   line-height: 1.56;
-=======
-  white-space: pre-line;
-  text-indent: 0;
-  line-height: 25px;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .infrastructure {
   padding-top: 32px;
-<<<<<<< HEAD
-=======
-  margin-top: 32px;
->>>>>>> add complex-style.css, fix class names and paddings
   border-top: solid 1px #eaebf0;
 }
 
@@ -296,11 +213,7 @@ button {
 }
 
 .infrastructure-wrapper {
-<<<<<<< HEAD
   padding-top: 0;
-=======
-  padding-top: 16px;
->>>>>>> add complex-style.css, fix class names and paddings
   padding-bottom: 56px;
 }
 
@@ -328,11 +241,7 @@ button {
   line-height: 1;
   text-align: left;
   color: #3e4247;
-<<<<<<< HEAD
   margin-top: 0;
-=======
-  margin-top: 0.5rem;
->>>>>>> add complex-style.css, fix class names and paddings
   margin-bottom: 24px;;
   padding-bottom: 0;
 }
@@ -344,11 +253,7 @@ button {
 
 .offers-list-block {
   display: block;
-<<<<<<< HEAD
   margin-bottom: 25px;
-=======
-  margin-bottom: 24px;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .offers-list-title {
@@ -356,18 +261,14 @@ button {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  color: #3e4247; 
+  color: #3e4247;
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-.offers-list-block-title {   
+.offers-list-block-title {
   font-size: 16px;
   color: #a9afb6;
-<<<<<<< HEAD
-=======
-  margin-bottom: 10px;
->>>>>>> add complex-style.css, fix class names and paddings
   line-height: 1.38;
   margin-top: 0;
   margin-bottom: 10px;
@@ -393,10 +294,7 @@ button {
   line-height: 1;
   font-family: "Fira Sans", sans-serif;
   margin-bottom: 0;
-<<<<<<< HEAD
   margin-top: 8px;
-=======
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-nearby {
@@ -413,11 +311,7 @@ button {
   text-align: left;
   color: #a9afb6;
   margin-top: 0;
-<<<<<<< HEAD
   margin-bottom: 48px;
-=======
-  margin-bottom: 3rem;
->>>>>>> add complex-style.css, fix class names and paddings
   padding-bottom: 0;
 }
 
@@ -427,11 +321,7 @@ button {
   font-weight: bold;
   line-height: 1.25;
   color: #ffffff;
-<<<<<<< HEAD
   margin-bottom: 48px;
-=======
-  margin-bottom: 3.25rem;
->>>>>>> add complex-style.css, fix class names and paddings
 }
 
 .complex-nearby-link {
@@ -449,13 +339,9 @@ button {
 }
 
 .complex-nearby-image {
-<<<<<<< HEAD
   width: 583px;
   height: 560px;
-    
-=======
-  width: 100%;
->>>>>>> add complex-style.css, fix class names and paddings
+
 }
 
 .complex-location {
@@ -476,21 +362,15 @@ button {
 }
 
 .complex-location-duration {
-<<<<<<< HEAD
   margin-bottom: 0px;
-=======
->>>>>>> add complex-style.css, fix class names and paddings
   margin-top: 8px;
   line-height: 1.38;
   color: #a9afb6;
 }
 
 .complex-location-name {
-<<<<<<< HEAD
   margin-top: 0;
   margin-bottom: 0;
-=======
->>>>>>> add complex-style.css, fix class names and paddings
   line-height: 1.38;
   font-weight: 500;
   color: #3e4247;
