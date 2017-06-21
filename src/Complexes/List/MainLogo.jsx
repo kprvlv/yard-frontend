@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from 'styled-components'
-import { Grid, Row, Col } from 'react-flexbox-grid'
-import DevelopmentLogo from "./img/compass-development-logo.svg";
+import developmentLogo from "./compass-development-logo.svg";
 
 const MainLogo = styled.div`
   display: flex;
@@ -24,7 +23,7 @@ const CompassDevelopmentLogo = styled.img`
 export default () => {
   return (
     <MainLogo>
-      <CompassDevelopmentLogo src={DevelopmentLogo}/>
+      <CompassDevelopmentLogo src={developmentLogo}/>
     </MainLogo>
   )
 }
