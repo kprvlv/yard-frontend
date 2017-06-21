@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import styled from 'styled-components'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
-const Description = styled.div`
+const Wrapper = styled.div`
   text-align: center;
   color: #3e4247;
   margin-bottom: 64px;
 `;
 
-const DescriptionTitle = styled.h2`
+const Title = styled.h2`
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -17,13 +17,13 @@ const DescriptionTitle = styled.h2`
   margin-top: 0px;
 `;
 
-const DescriptionText = styled.p`
+const Text = styled.p`
   line-height: 1.5rem;
   margin-bottom: 0px;
   margin-top: 0px;
 `;
 
-const DescriptionButton = styled.button`
+const Button = styled.button`
   background-color: #000;
   border: none;
   border-radius: 2px;
@@ -36,16 +36,16 @@ const DescriptionButton = styled.button`
 
 export default () => {
   return (
-    <Description>
+    <Wrapper>
       <Grid>
         <Row center="lg">
           <Col lg={8}>
-            <DescriptionTitle>Discover Our New Developments</DescriptionTitle>
-            <DescriptionText>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</DescriptionText>
-            <DescriptionButton>Contact The Team</DescriptionButton>
+            <Title>Discover Our New Developments</Title>
+            <Text>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</Text>
+            <Button>Contact The Team</Button>
           </Col>
         </Row>
       </Grid>
-    </Description>
+    </Wrapper>
   )
 }

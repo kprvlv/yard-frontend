@@ -51,7 +51,7 @@ body {
   text-align: left;
   font-size: 10px;
   font-weight: 300;
-  line-height: 1; 
+  line-height: 1;
   padding: 8px 16px;
   border-radius: 2px;
   border: solid 1px #e0e0e1;
@@ -261,12 +261,12 @@ body {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  color: #3e4247; 
+  color: #3e4247;
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-.offers-list-block-title {   
+.offers-list-block-title {
   font-size: 16px;
   color: #a9afb6;
   line-height: 1.38;
@@ -341,7 +341,7 @@ body {
 .complex-nearby-image {
   width: 583px;
   height: 560px;
-    
+
 }
 
 .complex-location {
