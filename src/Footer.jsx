@@ -123,7 +123,7 @@ export default () => {
               <Link href="#">ВТБ Арена Парк</Link>
               <Link href="#">Садовые кварталы</Link>
               <Link href="#">Резиденция Монэ</Link>
-              <LinkAll a href="#">
+              <LinkAll href="#">
                 Все ЖК Москвы<ArrowLink src={Arrow} />
               </LinkAll>
             </Col>
