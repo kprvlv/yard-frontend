@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-const HeaderWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-const HeaderText = styled.p`
+const Text = styled.p`
   display: block;
 `;
 
-const HeaderTitle = styled.h1`
+const Title = styled.h1`
   font-family: "Philosopher";
   font-size: 32px;
   font-weight: bold;
@@ -23,7 +23,7 @@ const HeaderTitle = styled.h1`
   margin-bottom: 1rem;
 `;
 
-const HeaderLocation = styled.p`
+const Location = styled.p`
   font-family: "Fira Sans", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -34,7 +34,7 @@ const HeaderLocation = styled.p`
   margin-bottom: 16px;
 `;
 
-const HeaderButton = styled.button`
+const Button = styled.button`
   margin-bottom: 52px;
   color: #00779a;
   text-align: left;
@@ -53,15 +53,15 @@ const HeaderButton = styled.button`
 export default () => {
   return (
     <Grid>
-      <HeaderWrapper>
-        <HeaderText>
-          <HeaderTitle>Жилой комплекс «Полянка/44»</HeaderTitle>
-          <HeaderLocation>
+      <Wrapper>
+        <Text>
+          <Title>Жилой комплекс «Полянка/44»</Title>
+          <Location>
             Район Якиманка, улица Большая Полянка, дом 44 • 119180
-          </HeaderLocation>
-        </HeaderText>
-        <HeaderButton>В избранное</HeaderButton>
-      </HeaderWrapper>
+          </Location>
+        </Text>
+        <Button>В избранное</Button>
+      </Wrapper>
     </Grid>
   );
 };

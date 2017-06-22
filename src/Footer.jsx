@@ -131,8 +131,8 @@ export default () => {
             <Col xs={2}>
               <Border />
               <Title>Компания</Title>
-              <Link a href="#">Команда</Link>
-              <Link a href="#">О компании</Link>
+              <Link href="#">Команда</Link>
+              <Link href="#">О компании</Link>
             </Col>
           </Row>
 

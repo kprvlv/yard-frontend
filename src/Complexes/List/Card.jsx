@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
 
-const Card = styled.link`
+const Card = styled(Link)`
   display: flex;
   background: #fff;
   text-decoration: none;
@@ -13,19 +13,19 @@ const Card = styled.link`
   }
 `;
 
-const CardImage = styled.img`
-  width: 484px;
+const Image = styled.img`
+  width: 100%;
   height: 350px;
 `;
 
-const CardDescription = styled.div`
+const Description = styled.div`
   display: block;
   padding-left: 16px;
   padding-right: 100px;
   border-bottom: solid 2px #646971;
 `;
 
-const CardLocation = styled.p`
+const Location = styled.p`
   display: block;
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   font-size: 16px;
@@ -35,7 +35,7 @@ const CardLocation = styled.p`
   line-height: 1.25;
 `;
 
-const CardTitle = styled.h3`
+const Title = styled.h3`
   display: block;
   font-size: 40px;
   font-weight: bold;
@@ -46,7 +46,7 @@ const CardTitle = styled.h3`
   margin-bottom: 0;
 `;
 
-const CardText = styled.p`
+const Text = styled.p`
   display: block;
   line-height: 1.5;
   text-align: left;
@@ -56,18 +56,18 @@ const CardText = styled.p`
 
 export default props => {
   return (
-    <Card to="/Show">
-      <CardImage src={process.env.PUBLIC_URL + "/img/bitmap-1.png"} />
-      <CardDescription>
-        <CardLocation>{props.location}</CardLocation>
-        <CardTitle>{props.title}</CardTitle>
-        <CardText>
+    <Card to="/show">
+      <Image src={process.env.PUBLIC_URL + "/img/bitmap_" + props.id + ".png"} />
+      <Description>
+        <Location>{props.location}</Location>
+        <Title>{props.title}</Title>
+        <Text>
           The Lewis Steel Building is a masterful industrial conversion located
           in the heart of Williamsburg. Located at 76 North 4th Street, the
           former 1930's steel factory has been transformed into 83 individually
           unique and luxury loft apartments.
-        </CardText>
-      </CardDescription>
+        </Text>
+      </Description>
     </Card>
   );
 };

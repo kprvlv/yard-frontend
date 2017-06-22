@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-const ComplexLocation = styled.div`
+const Wrapper = styled.div`
   margin-top: -150.5px;
   margin-bottom: 64.5px;
 `;
 
-const Map = styled.img`
+const LocationMap = styled.img`
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 303px;
@@ -40,10 +40,10 @@ const ContentList = styled.div`
 
 export default () => {
   return (
-    <ComplexLocation>
+    <Wrapper>
       <Row>
         <Col lg={6}>
-          <Map src={process.env.PUBLIC_URL + "img/map.png"} />
+          <LocationMap src={`${process.env.PUBLIC_URL}/img/map.png`} />
         </Col>
         <Col lg={6}>
           <ContentList>
@@ -62,6 +62,6 @@ export default () => {
           </ContentList>
         </Col>
       </Row>
-    </ComplexLocation>
+    </Wrapper>
   );
 };

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-const FeaturesWrapper = styled.div`
+const Wrapper = styled.div`
   margin-bottom: 48px;
   border-top: solid 1px #eaebf0;
 `;
@@ -58,7 +58,7 @@ const BlockText = styled.dd`
 
 export default () => {
   return (
-    <FeaturesWrapper>
+    <Wrapper>
       <Title>Характеристики</Title>
       <Row>
         <Col xs={4}>
@@ -106,6 +106,6 @@ export default () => {
           </Block>
         </Col>
       </Row>
-    </FeaturesWrapper>
+    </Wrapper>
   );
 };

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from 'styled-components'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
-const NearbyWrapper = styled.div`
+const Wrapper = styled.div`
   background-color: #3e4247;
   padding-top: 64px;
   padding-bottom: 218px;
@@ -44,25 +44,25 @@ const NearbyLink = styled.img`
 `;
 
 const NearbyImage = styled.img`
-  width: 583px;
+  width: 100%;
   height: 560px;
 `;
 
 export default () => {
   return (
-    <NearbyWrapper>
+    <Wrapper>
       <Grid>
         <Row middle="lg" between="lg">
           <Col lg={6}>
             <Title>Якиманка</Title>
             <Text>Исторический центр Москвы в двух километрах от Кремля</Text>
-            <Link>Гид по Якиманке</Link>
+            <Link>Гид по Якиманке<NearbyLink src={`${process.env.PUBLIC_URL}/img/arrow-nearby.svg`} /></Link>
           </Col>
           <Col lg={6}>
-            <NearbyImage src={process.env.PUBLIC_URL + "img/arrow-neraby.swg"} />
+            <NearbyImage src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
           </Col>
         </Row>
       </Grid>
-    </NearbyWrapper>
+    </Wrapper>
   );
 };

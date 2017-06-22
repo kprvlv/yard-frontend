@@ -18,11 +18,11 @@ export default () => {
             location="SOUTH BEACH, SAN FRANCISCO"
             title="The Harrison" />
           <Card
-            id={1}
+            id={2}
             location="MIDTOWN EAST, MANHATTAN"
             title="100 East 53rd Street" />
           <Card
-            id={1}
+            id={3}
             location="NOLITA, MANHATTAN"
             title="152 Elizabeth" />
         </Grid>

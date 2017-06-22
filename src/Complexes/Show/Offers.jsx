@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-const OffersBackground = styled.div`
+const Background = styled.div`
   background-color: #f4f5f9;
   padding-top: 64px;
   padding-bottom: 64px;
@@ -15,11 +15,13 @@ const Title = styled.h2`
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
-  text-align: left;
+  text-align: center;
   color: #3e4247;
   margin-top: 0;
   margin-bottom: 24px;;
   padding-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const ListWrapper = styled.div`
@@ -75,11 +77,9 @@ const ListButton = styled.button`
 
 export default () => {
   return (
-    <OffersBackground>
+    <Background>
       <Grid>
-        <Row center="lg">
-          <Title>Предложения в ЖК «Полянка/44»</Title>
-        </Row>
+        <Title>Предложения в ЖК «Полянка/44»</Title>
         <Row>
           <Col xs={4}>
             <ListWrapper>
@@ -139,6 +139,6 @@ export default () => {
           </Col>
         </Row>
       </Grid>
-    </OffersBackground>
+    </Background>
   );
 };
