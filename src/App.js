@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import MainHeader from './MainHeader'
+import Header from './MainHeader'
 import Complexes from './Complexes/List'
 import Complex from './Complexes/Show'
 import Footer from './Footer'
@@ -15,9 +15,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <MainHeader />
+          <Header />
           <Route exact path="/" component={Complexes} />
-          <Route path="/show" component={Complex} />
+          <Route path="/complex" component={Complex} />
           <Footer />
         </div>
       </Router>
