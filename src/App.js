@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import Header from './MainHeader'
+import Header from './Header'
 import Complexes from './Complexes/List'
 import Complex from './Complexes/Show'
 import Footer from './Footer'
