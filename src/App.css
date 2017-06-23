@@ -1,0 +1,19 @@
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1rem;
+}
+
+
+.complexes {
+  background: url('./img/background.png') 20px 10px / 20px 10px;
+  background-color: #EAEBF0;
+}
+
+.complex {
+  background-color: white;
+}
