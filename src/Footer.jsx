@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import Arrow from "./img/combined-shape.svg";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import Arrow from './img/combined-shape.svg';
 
-const MainFooter = styled.footer`
+const Footer = styled.footer`
   background-color: #111111;
 `;
 
@@ -104,50 +104,47 @@ const Disclaimer = styled.p`
   font-family: 'Fira Sans', sans-serif;
 `;
 
-export default () => {
-  return (
-    <MainFooter>
-      <Wrapper>
-        <Grid>
-          <Row>
-            <Col xs={4}>
-              <TitleName>ООО «Ярд»</TitleName>
-              <Info>ОГРН 1175074002531</Info>
-              <Info>ИНН 5036165365</Info>
-              <Phone>+7 (999) 821-14-88</Phone>
-            </Col>
+export default () =>
+  (<Footer>
+    <Wrapper>
+      <Grid>
+        <Row>
+          <Col xs={4}>
+            <TitleName>ООО «Ярд»</TitleName>
+            <Info>ОГРН 1175074002531</Info>
+            <Info>ИНН 5036165365</Info>
+            <Phone>+7 (999) 821-14-88</Phone>
+          </Col>
 
-            <Col xs={2}>
-              <Border />
-              <Title>Жилые комплексы</Title>
-              <Link href="#">ВТБ Арена Парк</Link>
-              <Link href="#">Садовые кварталы</Link>
-              <Link href="#">Резиденция Монэ</Link>
-              <LinkAll href="#">
-                Все ЖК Москвы<ArrowLink src={Arrow} />
-              </LinkAll>
-            </Col>
+          <Col xs={2}>
+            <Border />
+            <Title>Жилые комплексы</Title>
+            <Link href="#">ВТБ Арена Парк</Link>
+            <Link href="#">Садовые кварталы</Link>
+            <Link href="#">Резиденция Монэ</Link>
+            <LinkAll href="#">
+              Все ЖК Москвы<ArrowLink src={Arrow} />
+            </LinkAll>
+          </Col>
 
-            <Col xs={2}>
-              <Border />
-              <Title>Компания</Title>
-              <Link href="#">Команда</Link>
-              <Link href="#">О компании</Link>
-            </Col>
-          </Row>
+          <Col xs={2}>
+            <Border />
+            <Title>Компания</Title>
+            <Link href="#">Команда</Link>
+            <Link href="#">О компании</Link>
+          </Col>
+        </Row>
 
-          <Row>
-            <Col xsOffset={4} xs={8}>
-              <Disclaimer>
-                Любая информация, представленная на данном сайте, носит
-                исключительно информационный характер и ни при каких условиях не
-                является публичной офертой, определяемой положениями статьи 437
-                ГК РФ. © ООО «Ярд», 2017
-              </Disclaimer>
-            </Col>
-          </Row>
-        </Grid>
-      </Wrapper>
-    </MainFooter>
-  );
-};
+        <Row>
+          <Col xsOffset={4} xs={8}>
+            <Disclaimer>
+              Любая информация, представленная на данном сайте, носит
+              исключительно информационный характер и ни при каких условиях не
+              является публичной офертой, определяемой положениями статьи 437
+              ГК РФ. © ООО «Ярд», 2017
+            </Disclaimer>
+          </Col>
+        </Row>
+      </Grid>
+    </Wrapper>
+  </Footer>);

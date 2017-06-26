@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from 'styled-components'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Wrapper = styled.div`
   background-color: #3e4247;
@@ -48,21 +48,20 @@ const NearbyImage = styled.img`
   height: 560px;
 `;
 
-export default () => {
-  return (
-    <Wrapper>
-      <Grid>
-        <Row middle="lg" between="lg">
-          <Col lg={6}>
-            <Title>Якиманка</Title>
-            <Text>Исторический центр Москвы в двух километрах от Кремля</Text>
-            <Link>Гид по Якиманке<NearbyLink src={`${process.env.PUBLIC_URL}/img/arrow-nearby.svg`} /></Link>
-          </Col>
-          <Col lg={6}>
-            <NearbyImage src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
-          </Col>
-        </Row>
-      </Grid>
-    </Wrapper>
-  );
-};
+export default () =>
+  (<Wrapper>
+    <Grid>
+      <Row middle="lg" between="lg">
+        <Col lg={6}>
+          <Title>Якиманка</Title>
+          <Text>Исторический центр Москвы в двух<br /> километрах от Кремля</Text>
+          <Link>
+            Гид по Якиманке<NearbyLink src={`${process.env.PUBLIC_URL}/img/arrow-nearby.svg`} />
+          </Link>
+        </Col>
+        <Col lg={6}>
+          <NearbyImage src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
+        </Col>
+      </Row>
+    </Grid>
+  </Wrapper>);

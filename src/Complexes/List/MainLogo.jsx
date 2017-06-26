@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import styled from 'styled-components'
-import developmentLogo from "./compass-development-logo.svg";
+import React from 'react';
+import styled from 'styled-components';
+import developmentLogo from './compass-development-logo.svg';
+
 
 const MainLogo = styled.div`
   display: flex;
@@ -20,10 +21,8 @@ const CompassDevelopmentLogo = styled.img`
   max-width: 50%;
 `;
 
-export default () => {
-  return (
-    <MainLogo>
-      <CompassDevelopmentLogo src={developmentLogo}/>
-    </MainLogo>
-  )
-}
+export default () => (
+  <MainLogo>
+    <CompassDevelopmentLogo src={developmentLogo} />
+  </MainLogo>
+  );

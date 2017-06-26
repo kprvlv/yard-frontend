@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
 
 
 const Slider = styled.div`
@@ -29,19 +29,17 @@ const Button = styled.button`
   border-style: none;
 `;
 
-export default () => {
-  return (
-    <div>
-      <Slider>
-        <Image src={process.env.PUBLIC_URL + "img/complex_1.png"} />
-        <Image src={process.env.PUBLIC_URL + "img/complex_2.png"} />
-        <Image src={process.env.PUBLIC_URL + "img/complex_3.png"} />
-        <Image src={process.env.PUBLIC_URL + "img/complex_4.png"} />
-        <Image src={process.env.PUBLIC_URL + "img/complex_5.png"} />
-      </Slider>
-      <Grid>
-        <Button>41 фотография</Button>
-      </Grid>
-    </div>
+export default () => (
+  <div>
+    <Slider>
+      <Image src={`${process.env.PUBLIC_URL}img/complex_1.png`} />
+      <Image src={`${process.env.PUBLIC_URL}img/complex_2.png`} />
+      <Image src={`${process.env.PUBLIC_URL}img/complex_3.png`} />
+      <Image src={`${process.env.PUBLIC_URL}img/complex_4.png`} />
+      <Image src={`${process.env.PUBLIC_URL}img/complex_5.png`} />
+    </Slider>
+    <Grid>
+      <Button>41 фотография</Button>
+    </Grid>
+  </div>
   );
-};
