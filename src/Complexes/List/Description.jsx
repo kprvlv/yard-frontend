@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from 'styled-components'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -34,18 +34,19 @@ const Button = styled.button`
   font-size: 16px;
 `;
 
-export default () => {
-  return (
-    <Wrapper>
-      <Grid>
-        <Row center="lg">
-          <Col lg={8}>
-            <Title>Discover Our New Developments</Title>
-            <Text>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</Text>
-            <Button>Contact The Team</Button>
-          </Col>
-        </Row>
-      </Grid>
-    </Wrapper>
-  )
-}
+export default () =>
+  (<Wrapper>
+    <Grid>
+      <Row center="lg">
+        <Col lg={8}>
+          <Title>Discover Our New Developments</Title>
+          <Text>
+            Compass brings a modern approach to new development marketing and sales. From boutique
+            rental conversions to luxurious ground-up condominiums, browse our portfolio of
+            current offerings.
+          </Text>
+          <Button>Contact The Team</Button>
+        </Col>
+      </Row>
+    </Grid>
+  </Wrapper>);

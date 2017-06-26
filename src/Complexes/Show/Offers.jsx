@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Background = styled.div`
   background-color: #f4f5f9;
@@ -75,70 +75,68 @@ const ListButton = styled.button`
   margin-top: 8px;
 `;
 
-export default () => {
-  return (
-    <Background>
-      <Grid>
-        <Title>Предложения в ЖК «Полянка/44»</Title>
-        <Row>
-          <Col xs={4}>
-            <ListWrapper>
-              <ListTitle>1-комнатные квартиры</ListTitle>
+export default () => (
+  <Background>
+    <Grid>
+      <Title>Предложения в ЖК «Полянка/44»</Title>
+      <Row>
+        <Col xs={4}>
+          <ListWrapper>
+            <ListTitle>1-комнатные квартиры</ListTitle>
 
-              <ListBlock>
-                <ListBlockTitle>Площадь:</ListBlockTitle>
-                <ListBlockText>от 59 до 120 м²</ListBlockText>
-              </ListBlock>
-              <ListBlock>
-                <ListBlockTitle>Стоимость</ListBlockTitle>
-                <ListBlockText>от 20.3 до 84.2 млн руб</ListBlockText>
-              </ListBlock>
-              <Row center="xs">
-                <ListButton>Посмотреть предложения</ListButton>
-              </Row>
+            <ListBlock>
+              <ListBlockTitle>Площадь:</ListBlockTitle>
+              <ListBlockText>от 59 до 120 м²</ListBlockText>
+            </ListBlock>
+            <ListBlock>
+              <ListBlockTitle>Стоимость</ListBlockTitle>
+              <ListBlockText>от 20.3 до 84.2 млн руб</ListBlockText>
+            </ListBlock>
+            <Row center="xs">
+              <ListButton>Посмотреть предложения</ListButton>
+            </Row>
 
-            </ListWrapper>
-          </Col>
+          </ListWrapper>
+        </Col>
 
-          <Col xs={4}>
-            <ListWrapper>
-              <ListTitle>1-комнатные квартиры</ListTitle>
+        <Col xs={4}>
+          <ListWrapper>
+            <ListTitle>1-комнатные квартиры</ListTitle>
 
-              <ListBlock>
-                <ListBlockTitle>Площадь:</ListBlockTitle>
-                <ListBlockText>от 59 до 120 м²</ListBlockText>
-              </ListBlock>
-              <ListBlock>
-                <ListBlockTitle>Стоимость</ListBlockTitle>
-                <ListBlockText>от 20.3 до 84.2 млн руб</ListBlockText>
-              </ListBlock>
-              <Row center="xs">
-                <ListButton>Посмотреть предложения</ListButton>
-              </Row>
+            <ListBlock>
+              <ListBlockTitle>Площадь:</ListBlockTitle>
+              <ListBlockText>от 59 до 120 м²</ListBlockText>
+            </ListBlock>
+            <ListBlock>
+              <ListBlockTitle>Стоимость</ListBlockTitle>
+              <ListBlockText>от 20.3 до 84.2 млн руб</ListBlockText>
+            </ListBlock>
+            <Row center="xs">
+              <ListButton>Посмотреть предложения</ListButton>
+            </Row>
 
-            </ListWrapper>
-          </Col>
+          </ListWrapper>
+        </Col>
 
-          <Col xs={4}>
-            <ListWrapper>
-              <ListTitle>1-комнатные квартиры</ListTitle>
+        <Col xs={4}>
+          <ListWrapper>
+            <ListTitle>1-комнатные квартиры</ListTitle>
 
-              <ListBlock>
-                <ListBlockTitle>Площадь:</ListBlockTitle>
-                <ListBlockText>от 59 до 120 м²</ListBlockText>
-              </ListBlock>
-              <ListBlock>
-                <ListBlockTitle>Стоимость</ListBlockTitle>
-                <ListBlockText>от 20.3 до 84.2 млн руб</ListBlockText>
-              </ListBlock>
-              <Row center="xs">
-                <ListButton>Посмотреть предложения</ListButton>
-              </Row>
+            <ListBlock>
+              <ListBlockTitle>Площадь:</ListBlockTitle>
+              <ListBlockText>от 59 до 120 м²</ListBlockText>
+            </ListBlock>
+            <ListBlock>
+              <ListBlockTitle>Стоимость</ListBlockTitle>
+              <ListBlockText>от 20.3 до 84.2 млн руб</ListBlockText>
+            </ListBlock>
+            <Row center="xs">
+              <ListButton>Посмотреть предложения</ListButton>
+            </Row>
 
-            </ListWrapper>
-          </Col>
-        </Row>
-      </Grid>
-    </Background>
+          </ListWrapper>
+        </Col>
+      </Row>
+    </Grid>
+  </Background>
   );
-};

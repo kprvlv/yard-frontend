@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
 
-const SummaryHeaderWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-top: 16px;
@@ -34,21 +33,19 @@ const Text = styled.small`
   margin-bottom: 24px;
 `;
 
-export default () => {
-  return (
-    <SummaryHeaderWrapper>
-      <Title>
+export default () => (
+  <Wrapper>
+    <Title>
         950
         <Text>предложений</Text>
-      </Title>
-      <Title>
+    </Title>
+    <Title>
         John McAslan + Partners
         <Text>архитектор</Text>
-      </Title>
-      <Title>
+    </Title>
+    <Title>
         Группа «ПСН»
         <Text>застройщик</Text>
-      </Title>
-    </SummaryHeaderWrapper>
+    </Title>
+  </Wrapper>
   );
-};

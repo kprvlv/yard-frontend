@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
 const Wrapper = styled.div`
   margin-top: -150.5px;
@@ -38,30 +38,28 @@ const ContentList = styled.div`
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 `;
 
-export default () => {
-  return (
-    <Wrapper>
-      <Row>
-        <Col lg={6}>
-          <LocationMap src={`${process.env.PUBLIC_URL}/img/map.png`} />
-        </Col>
-        <Col lg={6}>
-          <ContentList>
-            <Content>
-              <Name>Красный октябрь</Name>
-              <Duration>24 минуты, 6 км</Duration>
-            </Content>
-            <Content>
-              <Name>World class</Name>
-              <Duration>2 минуты, 300 м</Duration>
-            </Content>
-            <Content>
-              <Name>Третьяковская галерея</Name>
-              <Duration>14 минуты, 4 км</Duration>
-            </Content>
-          </ContentList>
-        </Col>
-      </Row>
-    </Wrapper>
+export default () => (
+  <Wrapper>
+    <Row>
+      <Col lg={6}>
+        <LocationMap src={`${process.env.PUBLIC_URL}/img/map.png`} />
+      </Col>
+      <Col lg={6}>
+        <ContentList>
+          <Content>
+            <Name>Красный октябрь</Name>
+            <Duration>24 минуты, 6 км</Duration>
+          </Content>
+          <Content>
+            <Name>World class</Name>
+            <Duration>2 минуты, 300 м</Duration>
+          </Content>
+          <Content>
+            <Name>Третьяковская галерея</Name>
+            <Duration>14 минуты, 4 км</Duration>
+          </Content>
+        </ContentList>
+      </Col>
+    </Row>
+  </Wrapper>
   );
-};
