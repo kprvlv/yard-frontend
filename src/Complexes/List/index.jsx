@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable react/no-unescaped-entities */
 import { Grid } from 'react-flexbox-grid';
 import BodyClassName from 'react-body-classname';
 import React from 'react';
