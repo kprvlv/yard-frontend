@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import React from 'react';
 import { Grid } from 'react-flexbox-grid';
 import BodyClassName from 'react-body-classname';
-import React from 'react';
 import MainLogo from './MainLogo';
 import Description from './Description';
 import Card from './Card';

@@ -21,8 +21,8 @@ const Image = styled.img`
 
 const Description = styled.div`
   display: block;
-  padding-left: 32px;
-  padding-right: 86px;
+  padding-left: 2rem;
+  padding-right: 5.375em;
   border-bottom: solid 2px #646971;
 `;
 
