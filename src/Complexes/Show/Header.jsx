@@ -14,6 +14,8 @@ const Wrapper = styled.div`
 
 const Text = styled.p`
   display: block;
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 
 const Title = styled.h1`
