@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid } from 'react-flexbox-grid';
 import logo from './img/compass-logo.svg';
 
-const MainHeader = styled.header`
+const Header = styled.header`
   background-color: #fff;
 `;
 
@@ -39,19 +39,17 @@ const NavLink = styled.a`
   }
 `;
 
-export default () => {
-  return (
-    <MainHeader>
-      <Grid>
-        <Wrapper>
-          <Logo src={logo}/>
-          <Nav>
-            <NavLink href="">Купить</NavLink>
-            <NavLink href="">Снять</NavLink>
-            <NavLink href="">Наши агенты</NavLink>
-          </Nav>
-        </Wrapper>
-      </Grid>
-    </MainHeader>
-  )
-}
+export default () => (
+  <Header>
+    <Grid>
+      <Wrapper>
+        <Logo src={logo} />
+        <Nav>
+          <NavLink href="">Купить</NavLink>
+          <NavLink href="">Снять</NavLink>
+          <NavLink href="">Наши агенты</NavLink>
+        </Nav>
+      </Wrapper>
+    </Grid>
+  </Header>
+  );

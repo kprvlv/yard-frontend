@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Row, Col } from 'react-flexbox-grid';
 
 const Border = styled.div`
   padding-top: 32px;
@@ -34,49 +34,47 @@ const Text = styled.p`
 `;
 
 
-export default () => {
-  return (
-    <Border>
-      <Title>Инфраструктура</Title>
-      <Wrapper>
-        <Row>
-          <Col xs={2}>
-            <Text>Бассейн</Text>
-          </Col>
+export default () => (
+  <Border>
+    <Title>Инфраструктура</Title>
+    <Wrapper>
+      <Row>
+        <Col xs={2}>
+          <Text>Бассейн</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Детский сад</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Детский сад</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Частная школа</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Частная школа</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Бассейн</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Бассейн</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Детский сад</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Детский сад</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Частная школа</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Частная школа</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Частная школа</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Частная школа</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Частная школа</Text>
-          </Col>
+        <Col xs={2}>
+          <Text>Частная школа</Text>
+        </Col>
 
-          <Col xs={2}>
-            <Text>Частная школа</Text>
-          </Col>
-        </Row>
-      </Wrapper>
-    </Border>
+        <Col xs={2}>
+          <Text>Частная школа</Text>
+        </Col>
+      </Row>
+    </Wrapper>
+  </Border>
   );
-};

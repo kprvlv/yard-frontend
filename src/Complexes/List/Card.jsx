@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from 'react-router-dom'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Card = styled(Link)`
   display: flex;
@@ -14,14 +14,15 @@ const Card = styled(Link)`
 `;
 
 const Image = styled.img`
-  width: 100%;
+  width: 484px;
   height: 350px;
+  flex-shrink: 0;
 `;
 
 const Description = styled.div`
   display: block;
-  padding-left: 16px;
-  padding-right: 100px;
+  padding-left: 2rem;
+  padding-right: 5.375em;
   border-bottom: solid 2px #646971;
 `;
 
@@ -53,21 +54,12 @@ const Text = styled.p`
   color: #3e4247;
   margin-top: 8px;
 `;
-
-export default props => {
-  return (
-    <Card to="/show">
-      <Image src={process.env.PUBLIC_URL + "/img/bitmap_" + props.id + ".png"} />
-      <Description>
-        <Location>{props.location}</Location>
-        <Title>{props.title}</Title>
-        <Text>
-          The Lewis Steel Building is a masterful industrial conversion located
-          in the heart of Williamsburg. Located at 76 North 4th Street, the
-          former 1930's steel factory has been transformed into 83 individually
-          unique and luxury loft apartments.
-        </Text>
-      </Description>
-    </Card>
-  );
-};
+export default props =>
+  (<Card to="/complex">
+    <Image src={`${process.env.PUBLIC_URL}/img/bitmap_${props.id}.png`} />
+    <Description>
+      <Location>{props.location}</Location>
+      <Title>{props.title}</Title>
+      <Text>{props.children}</Text>
+    </Description>
+  </Card>);

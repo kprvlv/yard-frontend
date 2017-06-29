@@ -1,6 +1,10 @@
-import React, { Component } from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid } from 'react-flexbox-grid';
+
+const Border = styled.div`
+  border-top: solid 1px #eaebf0;
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,6 +14,8 @@ const Wrapper = styled.div`
 
 const Text = styled.p`
   display: block;
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 
 const Title = styled.h1`
@@ -50,8 +56,8 @@ const Button = styled.button`
   background-color: white;
 `;
 
-export default () => {
-  return (
+export default () =>
+  (<Border>
     <Grid>
       <Wrapper>
         <Text>
@@ -63,5 +69,4 @@ export default () => {
         <Button>В избранное</Button>
       </Wrapper>
     </Grid>
-  );
-};
+  </Border>);

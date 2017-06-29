@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Row, Col } from 'react-flexbox-grid';
 
 const Wrapper = styled.div`
   margin-bottom: 48px;
@@ -56,56 +56,54 @@ const BlockText = styled.dd`
   line-height: 1.56;
 `;
 
-export default () => {
-  return (
-    <Wrapper>
-      <Title>Характеристики</Title>
-      <Row>
-        <Col xs={4}>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Статус:</BlockTitle>
-            <BlockText>Квартиры</BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Цены:</BlockTitle>
-            <BlockText>от 5.3 до 143.5 млн</BlockText>
-          </Block>
-        </Col>
+export default () => (
+  <Wrapper>
+    <Title>Характеристики</Title>
+    <Row>
+      <Col xs={4}>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+        <Block>
+          <BlockTitle>Статус:</BlockTitle>
+          <BlockText>Квартиры</BlockText>
+        </Block>
+        <Block>
+          <BlockTitle>Цены:</BlockTitle>
+          <BlockText>от 5.3 до 143.5 млн</BlockText>
+        </Block>
+      </Col>
 
-        <Col xs={4}>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-        </Col>
+      <Col xs={4}>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+      </Col>
 
-        <Col xs={4}>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Количество квартир:</BlockTitle>
-            <BlockText>1508</BlockText>
-          </Block>
-        </Col>
-      </Row>
-    </Wrapper>
+      <Col xs={4}>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+        <Block>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>1508</BlockText>
+        </Block>
+      </Col>
+    </Row>
+  </Wrapper>
   );
-};

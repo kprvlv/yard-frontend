@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
 const Title = styled.h2`
   font-family: "Philosopher";
@@ -24,21 +24,20 @@ const Text = styled.p`
   line-height: 1.56;
 `;
 
-export default () => {
-  return (
-    <Row>
-      <Col xs={2}>
-        <Title>Описание</Title>
-      </Col>
+export default () => (
+  <Row>
+    <Col xs={2}>
+      <Title>Описание</Title>
+    </Col>
 
-      <Col xs={10}>
-        <Text>
+    <Col xs={10}>
+      <Text>
           ВТБ Арена Парк — современный квартал в 10 минутах езды от Кремля.
           Территория разделена на три зоны: жилой район, центральный стадион
           «Динамо» и большой спортивный парк.
         </Text>
 
-        <Text>
+      <Text>
           Жилой район — это 13 корпусов: апартаменты, штаб-квартира «Динамо»,
           отель
           «Hyatt Regency Moscow» и четыре современных бизнес-центра. На
@@ -52,7 +51,7 @@ export default () => {
           креслами для встреч с друзьями и соседями.
         </Text>
 
-        <Text>
+      <Text>
           Сердце ВТБ Арена Парк — стадион. Под одной крышей расположились музей,
           торгово-развлекательный комплекс, подземная парковка для гостей и две
           крупные спортивные арены. Жизнь квартала сосредоточена в этой зоне:
@@ -61,7 +60,7 @@ export default () => {
           купить новую рубашку в торговом комплексе.
         </Text>
 
-        <Text>
+      <Text>
           Тихий жилой район от шумного стадиона отделяет Парк Физкультуры и
           Отдыха.
           Здесь каждый найдет занятие: для детей оборудованы игровые зоны, для
@@ -70,7 +69,6 @@ export default () => {
           во
           время рабочего перерыва.
         </Text>
-      </Col>
-    </Row>
+    </Col>
+  </Row>
   );
-};
