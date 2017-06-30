@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 
-
 const Slider = styled.div`
   display: flex;
   overflow-x: auto;
@@ -32,11 +31,7 @@ const Button = styled.button`
 export default () => (
   <div>
     <Slider>
-      <Image src={`${process.env.PUBLIC_URL}img/complex_1.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_2.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_3.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_4.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_5.png`} />
+      <Image />)
     </Slider>
     <Grid>
       <Button>41 фотография</Button>
