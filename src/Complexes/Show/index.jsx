@@ -23,17 +23,17 @@ class Show extends Component {
   }
 
   componentDidMount() {
-    this.load();
+    this.load(this.props.match.params.id);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
-      this.load();
+      this.load(nextProps.match.params.id);
     }
   }
 
-  load() {
-    get(`/complexes/${this.props.match.params.id}`).then(json => this.setState(json));
+  load(id) {
+    get(`/complexes/${id}`).then(json => this.setState(json));
   }
 
   render() {
@@ -46,7 +46,7 @@ class Show extends Component {
             name={name}
             location={formatLocation(location)}
           />
-          <Gallery imageSlider={images.map(image => image.id)} />
+          <Gallery imageIds={images.map(image => image.id)} />
           <Grid>
             <SummaryHeader />
             <Features propertiesCount={propertiesCount} />

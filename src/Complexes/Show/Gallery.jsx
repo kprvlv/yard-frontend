@@ -27,7 +27,7 @@ const Button = styled.button`
 export default props =>
   (<div>
     <Slider>
-      {props.imageSlider.map(id =>
+      {props.imageIds.map(id =>
         <img key={id} src={getImageUrl(id)} alt="Slider" height="400px" />,
       )}
     </Slider>
