@@ -56,52 +56,52 @@ const BlockText = styled.dd`
   line-height: 1.56;
 `;
 
-export default () => (
+export default props => (
   <Wrapper>
     <Title>Характеристики</Title>
     <Row>
       <Col xs={4}>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
         <Block>
-          <BlockTitle>Статус:</BlockTitle>
-          <BlockText>Квартиры</BlockText>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
         <Block>
-          <BlockTitle>Цены:</BlockTitle>
-          <BlockText>от 5.3 до 143.5 млн</BlockText>
+          <BlockTitle>Количество квартир:</BlockTitle>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
       </Col>
 
       <Col xs={4}>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
       </Col>
 
       <Col xs={4}>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
         <Block>
           <BlockTitle>Количество квартир:</BlockTitle>
-          <BlockText>1508</BlockText>
+          <BlockText>{props.propertiesCount}</BlockText>
         </Block>
       </Col>
     </Row>

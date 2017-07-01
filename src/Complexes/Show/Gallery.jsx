@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
-
+import { getImageUrl } from '../../Utils';
 
 const Slider = styled.div`
   display: flex;
   overflow-x: auto;
-`;
-
-const Image = styled.img`
-  height: 400px;
-  object-fit: contain;
 `;
 
 const Button = styled.button`
@@ -29,17 +24,14 @@ const Button = styled.button`
   border-style: none;
 `;
 
-export default () => (
-  <div>
+export default props =>
+  (<div>
     <Slider>
-      <Image src={`${process.env.PUBLIC_URL}img/complex_1.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_2.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_3.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_4.png`} />
-      <Image src={`${process.env.PUBLIC_URL}img/complex_5.png`} />
+      {props.imageIds.map(id =>
+        <img key={id} src={getImageUrl(id)} alt="Slider" height="400px" />,
+      )}
     </Slider>
     <Grid>
       <Button>41 фотография</Button>
     </Grid>
-  </div>
-  );
+  </div>);

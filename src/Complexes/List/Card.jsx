@@ -54,9 +54,10 @@ const Text = styled.p`
   color: #3e4247;
   margin-top: 8px;
 `;
+
 export default props =>
-  (<Card to="/complex">
-    <Image src={`${process.env.PUBLIC_URL}/img/bitmap_${props.id}.png`} />
+  (<Card to={`/complex/${props.id}`}>
+    <Image src={props.imageUrl} />
     <Description>
       <Location>{props.location}</Location>
       <Title>{props.title}</Title>
