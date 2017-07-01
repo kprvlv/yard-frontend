@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
@@ -42,7 +44,7 @@ export default () => (
   <Wrapper>
     <Row>
       <Col lg={6}>
-        <LocationMap src={`${process.env.PUBLIC_URL}/img/map.png`} />
+        <LocationMap: string src={`${process.env.PUBLIC_URL}/img/map.png`} />
       </Col>
       <Col lg={6}>
         <ContentList>

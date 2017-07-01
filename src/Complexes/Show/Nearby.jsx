@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -56,11 +58,11 @@ export default () =>
           <Title>Якиманка</Title>
           <Text>Исторический центр Москвы в двух<br /> километрах от Кремля</Text>
           <Link>
-            Гид по Якиманке<NearbyLink src={`${process.env.PUBLIC_URL}/img/arrow-nearby.svg`} />
+            Гид по Якиманке<NearbyLink: string src={`${process.env.PUBLIC_URL}/img/arrow-nearby.svg`} />
           </Link>
         </Col>
         <Col lg={6}>
-          <NearbyImage src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
+          <NearbyImage: string src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
         </Col>
       </Row>
     </Grid>

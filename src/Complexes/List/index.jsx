@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+// @flow
 
 import React, { Component } from 'react';
 import { Grid } from 'react-flexbox-grid';
@@ -8,22 +9,28 @@ import Description from './Description';
 import Card from './Card';
 import { getImageUrl } from '../../Utils';
 import { get } from '../../Api';
+import type { Complex } from '../FlowTypes';
 
-function formatLocation(location) {
-  return [location.subLocalityName, location.street, location.house].filter(item => !!item).join(', ');
+function formatLocation(location): string {
+  return [(location.subLocalityName: string), (location.street: string), (location.house: number)]
+    .filter(item => !!item)
+    .join(', ');
 }
 
 class List extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {
+    complexes: [],
+  };
+  state: {
+    complexes: Array<Complex>,
+  };
 
   componentDidMount() {
     get('/complexes?filter[state]=public').then(({ items: complexes }) => {
       this.setState({ complexes });
     });
   }
+  items: Array<Object>;
 
   render() {
     const { complexes = [] } = this.state;

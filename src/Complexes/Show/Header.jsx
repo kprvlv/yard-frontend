@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
@@ -56,7 +58,12 @@ const Button = styled.button`
   background-color: white;
 `;
 
-export default props =>
+type Props = {
+  name: string,
+  location: string;
+};
+
+export default (props: Props) =>
   (<Border>
     <Grid>
       <Wrapper>
