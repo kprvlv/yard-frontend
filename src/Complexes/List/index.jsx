@@ -9,7 +9,7 @@ import Description from './Description';
 import Card from './Card';
 import { getImageUrl } from '../../Utils';
 import { get } from '../../Api';
-import type { Complex } from '../FlowTypes';
+import type { Complex } from '../types';
 
 function formatLocation(location): string {
   return [(location.subLocalityName: string), (location.street: string), (location.house: number)]
@@ -30,7 +30,7 @@ class List extends Component {
       this.setState({ complexes });
     });
   }
-  items: Array<Object>;
+  complexes: Array<Complex>;
 
   render() {
     const { complexes = [] } = this.state;

@@ -13,7 +13,7 @@ import Offers from './Offers';
 import Nearby from './Nearby';
 import Location from './Location';
 import { get } from '../../Api';
-import type { Complex } from '../FlowTypes';
+import type { Complex } from '../types';
 
 function formatLocation(location): string {
   return [
@@ -44,7 +44,7 @@ class Show extends Component {
   load(id: number) {
     get(`/complexes/${id}`).then(json => this.setState(json));
   }
-  items: Array<Object>;
+  complexes: Array<Complex>;
 
   render() {
     const { images = [], name, statistics = {}, location = {} } = this.state;
