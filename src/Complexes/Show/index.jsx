@@ -12,6 +12,10 @@ import Nearby from './Nearby';
 import Location from './Location';
 import { get } from '../../Api';
 
+function formatLocation(location) {
+  return [location.subLocalityName, location.street, location.house, location.postalCode].filter(item => !!item).join(', ');
+}
+
 class Show extends Component {
   constructor(props) {
     super(props);
@@ -19,23 +23,33 @@ class Show extends Component {
   }
 
   componentDidMount() {
-    get(`/complexes/${this.props.match.params.id}`).then(complex => this.setState(complex));
+    this.load();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.match.params.id !== this.props.match.params.id) {
+      this.load();
+    }
+  }
+
+  load() {
+    get(`/complexes/${this.props.match.params.id}`).then(json => this.setState(json));
   }
 
   render() {
-    const { name, location = {} } = this.state;
-    console.log(this.state);
+    const { images = [], name, statistics = {}, location = {} } = this.state;
+    const { propertiesCount = 'N/A' } = statistics;
     return (
       <BodyClassName className="complex">
         <div>
           <Header
             name={name}
-            location={`${location.subLocalityName}, ${location.street}, ${location.house}`}
+            location={formatLocation(location)}
           />
-          <Gallery />
+          <Gallery imageSlider={images.map(image => image.id)} />
           <Grid>
             <SummaryHeader />
-            <Features />
+            <Features propertiesCount={propertiesCount} />
             <ComplexDescription />
             <Infrastructure />
           </Grid>

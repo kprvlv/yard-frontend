@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
+import { getImageUrl } from '../../Utils';
 
 const Slider = styled.div`
   display: flex;
   overflow-x: auto;
-`;
-
-const Image = styled.img`
-  height: 400px;
-  object-fit: contain;
 `;
 
 const Button = styled.button`
@@ -28,13 +24,14 @@ const Button = styled.button`
   border-style: none;
 `;
 
-export default () => (
-  <div>
+export default props =>
+  (<div>
     <Slider>
-      <Image />)
+      {props.imageSlider.map(id =>
+        <img key={id} src={getImageUrl(id)} alt="Slider" height="400px" />,
+      )}
     </Slider>
     <Grid>
       <Button>41 фотография</Button>
     </Grid>
-  </div>
-  );
+  </div>);
