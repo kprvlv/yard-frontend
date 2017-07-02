@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -55,12 +57,19 @@ const Text = styled.p`
   margin-top: 8px;
 `;
 
-export default props =>
+type Props = {
+  id: number,
+  imageUrl: string,
+  location: string,
+  title: string,
+};
+
+export default (props: Props) =>
   (<Card to={`/complex/${props.id}`}>
     <Image src={props.imageUrl} />
     <Description>
       <Location>{props.location}</Location>
       <Title>{props.title}</Title>
-      <Text>{props.children}</Text>
+      <Text />
     </Description>
   </Card>);

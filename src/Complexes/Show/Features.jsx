@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
@@ -56,7 +58,11 @@ const BlockText = styled.dd`
   line-height: 1.56;
 `;
 
-export default props => (
+type Props = {
+  propertiesCount: number,
+};
+
+export default (props: Props) => (
   <Wrapper>
     <Title>Характеристики</Title>
     <Row>

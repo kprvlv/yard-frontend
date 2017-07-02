@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
@@ -24,7 +26,11 @@ const Button = styled.button`
   border-style: none;
 `;
 
-export default props =>
+type Props = {
+  imageIds: Array<string>
+};
+
+export default (props: Props) =>
   (<div>
     <Slider>
       {props.imageIds.map(id =>

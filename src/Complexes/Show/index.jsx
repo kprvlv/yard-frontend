@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import { Grid } from 'react-flexbox-grid';
 import BodyClassName from 'react-body-classname';
@@ -9,36 +11,39 @@ import ComplexDescription from './ComplexDescription';
 import Infrastructure from './Infrastructure';
 import Offers from './Offers';
 import Nearby from './Nearby';
-import Location from './Location';
+import Area from './Area';
 import { get } from '../../Api';
+import type { Complex, Location } from '../types';
 
-function formatLocation(location) {
-  return [location.subLocalityName, location.street, location.house, location.postalCode].filter(item => !!item).join(', ');
+function formatLocation({ subLocalityName, street, house, postalCode }: Location): string {
+  return [subLocalityName, street, house, postalCode]
+    .filter(item => !!item)
+    .join(', ');
 }
 
 class Show extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {};
+
+  state: Complex;
 
   componentDidMount() {
     this.load(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Object) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
       this.load(nextProps.match.params.id);
     }
   }
 
-  load(id) {
+  load(id: number) {
     get(`/complexes/${id}`).then(json => this.setState(json));
   }
+  complexes: Array<Complex>;
 
   render() {
     const { images = [], name, statistics = {}, location = {} } = this.state;
-    const { propertiesCount = 'N/A' } = statistics;
+    const { propertiesCount } = statistics;
     return (
       <BodyClassName className="complex">
         <div>
@@ -56,7 +61,7 @@ class Show extends Component {
           <Offers />
           <Nearby />
           <Grid>
-            <Location />
+            <Area />
           </Grid>
         </div>
       </BodyClassName>
