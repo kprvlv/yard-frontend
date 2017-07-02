@@ -9,13 +9,7 @@ import Description from './Description';
 import Card from './Card';
 import { getImageUrl } from '../../Utils';
 import { get } from '../../Api';
-import type { Complex } from '../types';
-
-type Location = {
-  subLocalityName: string,
-  street: string,
-  house: number
-};
+import type { Complex, Location } from '../types';
 
 function formatLocation({ subLocalityName, street, house }: Location): string {
   return [subLocalityName, street, house]

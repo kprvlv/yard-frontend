@@ -13,14 +13,7 @@ import Offers from './Offers';
 import Nearby from './Nearby';
 import Area from './Area';
 import { get } from '../../Api';
-import type { Complex } from '../types';
-
-type Location = {
-  subLocalityName: string,
-  street: string,
-  house: number,
-  postalCode: number;
-};
+import type { Complex, Location } from '../types';
 
 function formatLocation({ subLocalityName, street, house, postalCode }: Location): string {
   return [subLocalityName, street, house, postalCode]
