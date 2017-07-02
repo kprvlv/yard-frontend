@@ -70,6 +70,6 @@ export default (props: Props) =>
     <Description>
       <Location>{props.location}</Location>
       <Title>{props.title}</Title>
-      <Text />;
+      <Text />
     </Description>
   </Card>);

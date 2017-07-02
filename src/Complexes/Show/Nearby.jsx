@@ -50,6 +50,8 @@ const NearbyImage = styled.img`
   height: 560px;
 `;
 
+const PUBLIC_URL: string = process.env.PUBLIC_URL || '';
+
 export default () =>
   (<Wrapper>
     <Grid>
@@ -58,11 +60,11 @@ export default () =>
           <Title>Якиманка</Title>
           <Text>Исторический центр Москвы в двух<br /> километрах от Кремля</Text>
           <Link>
-            Гид по Якиманке<NearbyLink: string src={`${process.env.PUBLIC_URL}/img/arrow-nearby.svg`} />
+            Гид по Якиманке<NearbyLink src={`${PUBLIC_URL}/img/arrow-nearby.svg`} />
           </Link>
         </Col>
         <Col lg={6}>
-          <NearbyImage: string src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
+          <NearbyImage src={`${PUBLIC_URL}/img/polyanka-photo.png`} />
         </Col>
       </Row>
     </Grid>

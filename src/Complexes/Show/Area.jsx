@@ -40,11 +40,13 @@ const ContentList = styled.div`
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 `;
 
+const PUBLIC_URL: string = process.env.PUBLIC_URL || '';
+
 export default () => (
   <Wrapper>
     <Row>
       <Col lg={6}>
-        <LocationMap: string src={`${process.env.PUBLIC_URL}/img/map.png`} />
+        <LocationMap src={`${PUBLIC_URL}/img/map.png`} />
       </Col>
       <Col lg={6}>
         <ContentList>

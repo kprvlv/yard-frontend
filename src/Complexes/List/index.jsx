@@ -11,8 +11,14 @@ import { getImageUrl } from '../../Utils';
 import { get } from '../../Api';
 import type { Complex } from '../types';
 
-function formatLocation(location): string {
-  return [(location.subLocalityName: string), (location.street: string), (location.house: number)]
+type Location = {
+  subLocalityName: string,
+  street: string,
+  house: number
+};
+
+function formatLocation({ subLocalityName, street, house }: Location): string {
+  return [subLocalityName, street, house]
     .filter(item => !!item)
     .join(', ');
 }

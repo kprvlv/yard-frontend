@@ -11,17 +11,19 @@ import ComplexDescription from './ComplexDescription';
 import Infrastructure from './Infrastructure';
 import Offers from './Offers';
 import Nearby from './Nearby';
-import Location from './Location';
+import Area from './Area';
 import { get } from '../../Api';
 import type { Complex } from '../types';
 
-function formatLocation(location): string {
-  return [
-    (location.subLocalityName: string),
-    (location.street: string),
-    (location.house: number),
-    (location.postalCode: number),
-  ]
+type Location = {
+  subLocalityName: string,
+  street: string,
+  house: number,
+  postalCode: number;
+};
+
+function formatLocation({ subLocalityName, street, house, postalCode }: Location): string {
+  return [subLocalityName, street, house, postalCode]
     .filter(item => !!item)
     .join(', ');
 }
@@ -66,7 +68,7 @@ class Show extends Component {
           <Offers />
           <Nearby />
           <Grid>
-            <Location />
+            <Area />
           </Grid>
         </div>
       </BodyClassName>
