@@ -33,6 +33,6 @@
     "flow": "flow",
     "flow-typed": "flow-typed",
     "prepush": "yarn lint && yarn flow",
-    "deploy": "yarn build && now ./build --public --name yard-frontend"
+    "deploy": "yarn build && now ./build --public --name yard-build"
   }
 }
