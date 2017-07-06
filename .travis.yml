@@ -3,6 +3,7 @@ node_js:
 - "node"
 install:
 - yarn install
+- yarn flow-typed install
 script:
 - yarn lint
 - yarn flow
