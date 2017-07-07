@@ -1,19 +1,19 @@
 // @flow
 
 export type Location = {
-  latitude: number,
-  localityId: number,
-  subLocalityName: string,
-  subwayIds: Array<number>,
-  countryName: string,
-  longitude: number,
-  postalCode: number,
-  countryId: number,
-  house: number,
-  localityName: string,
-  street: string,
-  regionId: number,
-  regionName: string,
+  latitude?: number,
+  localityId?: number,
+  subLocalityName?: string,
+  subwayIds?: Array<number>,
+  countryName?: string,
+  longitude?: number,
+  postalCode?: number,
+  countryId?: number,
+  house?: number,
+  localityName?: string,
+  street?: string,
+  regionId?: number,
+  regionName?: string,
 };
 
 export type Complex = {
