@@ -33,10 +33,10 @@
     "lint": "eslint --ext .js,.jsx src/",
     "flow": "flow",
     "flow-typed": "flow-typed",
-        "deploy": "yarn build && now --public --token $NOW_TOKEN build && now alias --token $NOW_TOKEN"
-      },
-      "now": {
-        "name": "build",
-        "alias": "yard-kprvlv"
-      }
-    }
+    "deploy": "yarn build && now --public --token $NOW_TOKEN build && now alias --token $NOW_TOKEN"
+  },
+  "now": {
+    "name": "build",
+    "alias": "yard-kprvlv"
+  }
+}
