@@ -27,15 +27,13 @@ const Button = styled.button`
 `;
 
 type Props = {
-  imageIds: Array<string>
+  imageIds: Array<string>,
 };
 
 export default (props: Props) =>
   (<div>
     <Slider>
-      {props.imageIds.map(id =>
-        <img key={id} src={getImageUrl(id)} alt="Slider" height="400px" />,
-      )}
+      {props.imageIds.map(id => <img key={id} src={getImageUrl(id)} alt="Slider" height="400px" />)}
     </Slider>
     <Grid>
       <Button>41 фотография</Button>
