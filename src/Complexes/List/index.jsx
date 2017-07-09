@@ -7,9 +7,9 @@ import BodyClassName from 'react-body-classname';
 import MainLogo from './MainLogo';
 import Description from './Description';
 import Card from './Card';
-import { get } from '../../api';
+import { get } from '../../apiUrl';
 import type { ComplexType, LocationType } from '../types';
-import { getImageUrl } from '../../utils';
+import { getImageUrl } from '../../utilities';
 
 function formatLocation({ subLocalityName, street, house }: LocationType): string {
   return [subLocalityName, street, house]

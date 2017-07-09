@@ -12,7 +12,7 @@ import Infrastructure from './Infrastructure';
 import Offers from './Offers';
 import Nearby from './Nearby';
 import Area from './Area';
-import { get } from '../../api';
+import { get } from '../../apiUrl';
 import type { ComplexType, LocationType } from '../types';
 
 function formatLocation({ subLocalityName, street, house, postalCode }: LocationType): string {
