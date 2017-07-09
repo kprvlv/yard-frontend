@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
-import { getImageUrl } from '../../Utils';
+import { getImageUrl } from '../../utils';
 
 const Slider = styled.div`
   display: flex;

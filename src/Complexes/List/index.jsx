@@ -7,8 +7,9 @@ import BodyClassName from 'react-body-classname';
 import MainLogo from './MainLogo';
 import Description from './Description';
 import Card from './Card';
-import { get } from '../../Api';
+import { get } from '../../api';
 import type { ComplexType, LocationType } from '../types';
+import { getImageUrl } from '../../utils';
 
 function formatLocation({ subLocalityName, street, house }: LocationType): string {
   return [subLocalityName, street, house]
@@ -45,7 +46,7 @@ class List extends Component {
                 id={complex.id}
                 location={formatLocation(complex.location)}
                 title={complex.name}
-                img={complex.images[0].id}
+                img={getImageUrl(complex.images[0].id)}
               >
                 {complex.shortDescription}
               </Card>),

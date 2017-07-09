@@ -3,7 +3,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { getImageUrl } from './../../Utils';
 
 const Card = styled(Link)`
   display: flex;
@@ -69,19 +68,11 @@ type Props = {
 export default ({ id, img, location, title, children }: Props) =>
   (<Card to={`/complex/${id}`}>
     <Image
-      style={{
-        backgroundImage: `url(${getImageUrl(img)})`,
-      }}
+      src={img}
     />
     <Description>
-      <Location>
-        {location}
-      </Location>
-      <Title>
-        {title}
-      </Title>
-      <Text>
-        {children}
-      </Text>
+      <Location>{location}</Location>
+      <Title>{title}</Title>
+      <Text>{children}</Text>
     </Description>
   </Card>);

@@ -60,6 +60,31 @@ const BlockText = styled.dd`
   line-height: 1.56;
 `;
 
+function formatNumber(number: number, to: number): string {
+  return Math.round(number).toFixed(to);
+}
+
+function formatPrice(price: number): string {
+  return formatNumber(price / 1000000, 1);
+}
+
+function formatParkings(parking: number): string {
+  if (!!parking && parking === 0) {
+    return 'Нет';
+  }
+  return `${parking} м/м`;
+}
+
+function formatArea(area: number): string {
+  return formatNumber(area, 1);
+}
+
+function formatCeilHeight(from: number, to: number): string {
+  const formatFrom = formatNumber(from);
+  const formatTo = formatNumber(to);
+  return `${formatFrom} - ${formatTo}`;
+}
+
 type Props = {
   details: DetailsType,
   statistics: StatisticsType,
@@ -88,102 +113,83 @@ export default (props: Props) => {
       <Title>Характеристики</Title>
       <Row>
         <Col xs={4}>
-          {!!propertiesCount &&
-            <Block>
-              <BlockTitle>Количество квартир:</BlockTitle>
-              <BlockText>
-                {propertiesCount}
-              </BlockText>
-            </Block>}
-          {!!propertyKind &&
-            <Block>
-              <BlockTitle>Статус</BlockTitle>
-              <BlockText>
-                {kinds[propertyKind]}
-              </BlockText>
-            </Block>}
-          {!!priceFrom.rub &&
-            !!priceTo.rub &&
-            <Block>
-              <BlockTitle>Цены</BlockTitle>
-              <BlockText>
-                от {(priceFrom.rub / 1000000).toFixed(1)} до {(priceTo.rub / 1000000).toFixed(1)}{' '}
-                млн
-              </BlockText>
-            </Block>}
-          {!!security &&
-            <Block>
-              <BlockTitle>Безопасность</BlockTitle>
-              <BlockText>
-                {securityKinds[security]}
-              </BlockText>
-            </Block>}
+          <Block>
+            <BlockTitle>Количество квартир:</BlockTitle>
+            <BlockText>
+              {propertiesCount}
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Статус</BlockTitle>
+            <BlockText>
+              {kinds[propertyKind]}
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Цены</BlockTitle>
+            <BlockText>
+              от {formatPrice(priceFrom.rub)} до {formatPrice(priceTo.rub)} млн
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Безопасность</BlockTitle>
+            <BlockText>
+              {securityKinds[security]}
+            </BlockText>
+          </Block>
         </Col>
 
         <Col xs={4}>
-          {!!constructionKind &&
-            <Block>
-              <BlockTitle>Конструкция корпусов</BlockTitle>
-              <BlockText>
-                {constructionKinds[constructionKind]}
-              </BlockText>
-            </Block>}
-          {!!totalArea.from &&
-            !!totalArea.to &&
-            <Block>
-              <BlockTitle>Площадь</BlockTitle>
-              <BlockText>
-                от {Math.round(totalArea.from)} до {Math.round(totalArea.to)} м²
-              </BlockText>
-            </Block>}
-          {!!ceilHeight.from &&
-            !!ceilHeight.to &&
-            <Block>
-              <BlockTitle>Высота потолков</BlockTitle>
-              <BlockText>
-                {' '}от {Math.round(ceilHeight.from * 100) / 100} до{' '}
-                {Math.round(ceilHeight.to * 100) / 100} м
-              </BlockText>
-            </Block>}
-          {!!maintenanceCosts &&
-            <Block>
-              <BlockTitle>Обслуживание</BlockTitle>
-              <BlockText>
-                {maintenanceCosts} руб / м² / месяц
-              </BlockText>
-            </Block>}
+          <Block>
+            <BlockTitle>Конструкция корпусов</BlockTitle>
+            <BlockText>
+              {constructionKinds[constructionKind]}
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Площадь</BlockTitle>
+            <BlockText>
+              от {formatArea(totalArea.from)} до {formatArea(totalArea.to)} млн
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Высота потолков</BlockTitle>
+            <BlockText>
+              {formatCeilHeight(ceilHeight)}
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Обслуживание</BlockTitle>
+            <BlockText>
+              {maintenanceCosts} руб / м² / месяц
+            </BlockText>
+          </Block>
         </Col>
 
         <Col xs={4}>
-          {!!startQuarter &&
-            !!startYear &&
-            <Block>
-              <BlockTitle>Начало строительства</BlockTitle>
-              <BlockText>
-                {quarters[startQuarter]} квартал {startYear} года
-              </BlockText>
-            </Block>}
-          {!!commissioningQuarter &&
-            !!commissioningYear &&
-            <Block>
-              <BlockTitle>Конец строительства</BlockTitle>
-              <BlockText>
-                {quarters[commissioningQuarter]} квартал {commissioningYear} года
-              </BlockText>
-            </Block>}
+          <Block>
+            <BlockTitle>Начало строительства</BlockTitle>
+            <BlockText>
+              {quarters[startQuarter]} квартал {startYear} года
+            </BlockText>
+          </Block>
+          <Block>
+            <BlockTitle>Конец строительства</BlockTitle>
+            <BlockText>
+              {quarters[commissioningQuarter]} квартал {commissioningYear} года
+            </BlockText>
+          </Block>
 
           <Block>
-            <BlockTitle>наземная парковка</BlockTitle>
+            <BlockTitle>Наземная парковка</BlockTitle>
             <BlockText>
-              {!!parkings && parkings !== 0 ? `${parkings} м/м` : 'Нет'}
+              {formatParkings(parkings)}
             </BlockText>
           </Block>
           <Block>
             <BlockTitle>Подземная парковка</BlockTitle>
             <BlockText>
-              {!!undergroundGarages && undergroundGarages !== 0
-                ? `${undergroundGarages} м/м`
-                : 'Нет'}
+              {formatParkings(undergroundGarages)}
             </BlockText>
           </Block>
         </Col>
