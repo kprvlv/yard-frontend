@@ -21,6 +21,11 @@ export type ImagesType = {
   isPublic: boolean,
 };
 
+export type RangeType = {
+  to: number,
+  from: number
+}
+
 export type StatisticsType = {
   resalePropertiesCount?: number,
   price?: {

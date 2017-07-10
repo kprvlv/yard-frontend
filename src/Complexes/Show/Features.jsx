@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
-import type { DetailsType, StatisticsType } from '../types';
+import type { DetailsType, StatisticsType, RangeType } from '../types';
 import { kinds, securityKinds, constructionKinds, quarters } from '../dictionaries';
 
 const Wrapper = styled.div`
@@ -60,8 +60,22 @@ const BlockText = styled.dd`
   line-height: 1.56;
 `;
 
-function formatNumber(number: number, to: number): string {
+function formatNumber(number: number, to: number = 2): string {
   return Math.round(number).toFixed(to);
+}
+
+function formatArea(area: number): string {
+  return formatNumber(area, 1);
+}
+
+function formatCeilHeight({ from, to }: RangeType): string {
+  const formattedFrom = formatNumber(from);
+  const formattedTo = formatNumber(to);
+
+  if (formattedFrom === formattedTo) {
+    return `${formattedFrom}`;
+  }
+  return `${formattedFrom} - ${formattedTo}`;
 }
 
 function formatPrice(price: number): string {
@@ -69,20 +83,10 @@ function formatPrice(price: number): string {
 }
 
 function formatParkings(parking: number): string {
-  if (!!parking && parking === 0) {
+  if (!parking || parking === 0) {
     return 'Нет';
   }
   return `${parking} м/м`;
-}
-
-function formatArea(area: number): string {
-  return formatNumber(area, 1);
-}
-
-function formatCeilHeight(from: number, to: number): string {
-  const formatFrom = formatNumber(from);
-  const formatTo = formatNumber(to);
-  return `${formatFrom} - ${formatTo}`;
 }
 
 type Props = {
