@@ -56,7 +56,7 @@ class Show extends Component {
       <BodyClassName className="complex">
         <div>
           <Header name={name} location={formatLocation(location)} />
-          <Gallery imageIds={images.map(image => image.id)} />
+          <Gallery images={images} />
           <Grid>
             <SummaryHeader
               units={units}

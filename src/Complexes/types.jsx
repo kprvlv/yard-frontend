@@ -16,10 +16,10 @@ export type LocationType = {
   regionName?: string,
 };
 
-export type ImagesType = Array<{
+export type ImagesType = {
   id: string,
   isPublic: boolean,
-}>;
+};
 
 export type RangeType = {
   to: number,
