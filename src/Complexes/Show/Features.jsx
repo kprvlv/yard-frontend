@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
-import type { DetailsType, StatisticsType, RangeType } from '../types';
+import type { DetailsType, StatisticsType } from '../types';
 import { kinds, securityKinds, constructionKinds, quarters } from '../dictionaries';
 
 const Wrapper = styled.div`
@@ -68,16 +68,6 @@ function formatArea(area: number): string {
   return formatNumber(area, 1);
 }
 
-function formatCeilHeight({ from, to }: RangeType): string {
-  const formattedFrom = formatNumber(from);
-  const formattedTo = formatNumber(to);
-
-  if (formattedFrom === formattedTo) {
-    return `${formattedFrom}`;
-  }
-  return `${formattedFrom} - ${formattedTo}`;
-}
-
 function formatPrice(price: number): string {
   return formatNumber(price / 1000000, 1);
 }
@@ -123,45 +113,51 @@ export default (props: Props) => {
               {propertiesCount}
             </BlockText>
           </Block>
-          <Block>
-            <BlockTitle>Статус</BlockTitle>
-            <BlockText>
-              {kinds[propertyKind]}
-            </BlockText>
-          </Block>
+          {!!propertyKind &&
+            <Block>
+              <BlockTitle>Статус</BlockTitle>
+              <BlockText>
+                {kinds[propertyKind]}
+              </BlockText>
+            </Block>}
           <Block>
             <BlockTitle>Цены</BlockTitle>
             <BlockText>
               от {formatPrice(priceFrom.rub)} до {formatPrice(priceTo.rub)} млн
             </BlockText>
           </Block>
-          <Block>
-            <BlockTitle>Безопасность</BlockTitle>
-            <BlockText>
-              {securityKinds[security]}
-            </BlockText>
-          </Block>
+          {!!security &&
+            <Block>
+              <BlockTitle>Безопасность</BlockTitle>
+              <BlockText>
+                {securityKinds[security]}
+              </BlockText>
+            </Block>}
         </Col>
 
         <Col xs={4}>
-          <Block>
-            <BlockTitle>Конструкция корпусов</BlockTitle>
-            <BlockText>
-              {constructionKinds[constructionKind]}
-            </BlockText>
-          </Block>
+          {!!constructionKind &&
+            <Block>
+              <BlockTitle>Конструкция корпусов</BlockTitle>
+              <BlockText>
+                {constructionKinds[constructionKind]}
+              </BlockText>
+            </Block>}
           <Block>
             <BlockTitle>Площадь</BlockTitle>
             <BlockText>
               от {formatArea(totalArea.from)} до {formatArea(totalArea.to)} млн
             </BlockText>
           </Block>
-          <Block>
-            <BlockTitle>Высота потолков</BlockTitle>
-            <BlockText>
-              {formatCeilHeight(ceilHeight)}
-            </BlockText>
-          </Block>
+          {!!ceilHeight.from &&
+            !!ceilHeight.to &&
+            <Block>
+              <BlockTitle>Высота потолков</BlockTitle>
+              <BlockText>
+                от {Math.round(ceilHeight.from * 100) / 100} до{' '}
+                {Math.round(ceilHeight.to * 100) / 100} м
+              </BlockText>
+            </Block>}
           <Block>
             <BlockTitle>Обслуживание</BlockTitle>
             <BlockText>
@@ -171,31 +167,36 @@ export default (props: Props) => {
         </Col>
 
         <Col xs={4}>
-          <Block>
-            <BlockTitle>Начало строительства</BlockTitle>
-            <BlockText>
-              {quarters[startQuarter]} квартал {startYear} года
-            </BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Конец строительства</BlockTitle>
-            <BlockText>
-              {quarters[commissioningQuarter]} квартал {commissioningYear} года
-            </BlockText>
-          </Block>
-
-          <Block>
-            <BlockTitle>Наземная парковка</BlockTitle>
-            <BlockText>
-              {formatParkings(parkings)}
-            </BlockText>
-          </Block>
-          <Block>
-            <BlockTitle>Подземная парковка</BlockTitle>
-            <BlockText>
-              {formatParkings(undergroundGarages)}
-            </BlockText>
-          </Block>
+          {!!startQuarter &&
+            !!startYear &&
+            <Block>
+              <BlockTitle>Начало строительства</BlockTitle>
+              <BlockText>
+                {quarters[startQuarter]} квартал {startYear} года
+              </BlockText>
+            </Block>}
+          {!!commissioningQuarter &&
+            !!commissioningYear &&
+            <Block>
+              <BlockTitle>Конец строительства</BlockTitle>
+              <BlockText>
+                {quarters[commissioningQuarter]} квартал {commissioningYear} года
+              </BlockText>
+            </Block>}
+          {!!parkings &&
+            <Block>
+              <BlockTitle>Наземная парковка</BlockTitle>
+              <BlockText>
+                {formatParkings(parkings)}
+              </BlockText>
+            </Block>}
+          {!!undergroundGarages &&
+            <Block>
+              <BlockTitle>Подземная парковка</BlockTitle>
+              <BlockText>
+                {formatParkings(undergroundGarages)}
+              </BlockText>
+            </Block>}
         </Col>
       </Row>
     </Wrapper>
