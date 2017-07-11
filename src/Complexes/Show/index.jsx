@@ -12,10 +12,10 @@ import Infrastructure from './Infrastructure';
 import Offers from './Offers';
 import Nearby from './Nearby';
 import Area from './Area';
-import { get } from '../../Api';
-import type { Complex, Location } from '../types';
+import { get } from '../../apiUrl';
+import type { ComplexType, LocationType } from '../types';
 
-function formatLocation({ subLocalityName, street, house, postalCode }: Location): string {
+function formatLocation({ subLocalityName, street, house, postalCode }: LocationType): string {
   return [subLocalityName, street, house, postalCode]
     .filter(item => !!item)
     .join(', ');
@@ -24,7 +24,7 @@ function formatLocation({ subLocalityName, street, house, postalCode }: Location
 class Show extends Component {
   state = {};
 
-  state: Complex;
+  state: ComplexType;
 
   componentDidMount() {
     this.load(this.props.match.params.id);
@@ -39,26 +39,37 @@ class Show extends Component {
   load(id: number) {
     get(`/complexes/${id}`).then(json => this.setState(json));
   }
-  complexes: Array<Complex>;
+  complexes: Array<ComplexType>;
 
   render() {
-    const { images = [], name, statistics = {}, location = {} } = this.state;
-    const { propertiesCount } = statistics;
+    const {
+      name = '',
+      location = {},
+      images = [],
+      units = 0,
+      details = {},
+      statistics = {},
+      fullDescription = '',
+      amenities = [],
+    } = this.state;
     return (
       <BodyClassName className="complex">
         <div>
-          <Header
-            name={name}
-            location={formatLocation(location)}
-          />
-          <Gallery imageIds={images.map(image => image.id)} />
+          <Header name={name} location={formatLocation(location)} />
+          <Gallery images={images} />
           <Grid>
-            <SummaryHeader />
-            <Features propertiesCount={propertiesCount} />
-            <ComplexDescription />
-            <Infrastructure />
+            <SummaryHeader
+              units={units}
+              details={details}
+              statistics={statistics}
+              fullDescription={fullDescription}
+              amenities={amenities}
+            />
+            <Features statistics={statistics} details={details} />
+            {!!fullDescription && <ComplexDescription fullDescription={fullDescription} />}
+            {amenities.length > 0 && <Infrastructure amenities={amenities} />}
           </Grid>
-          <Offers />
+          <Offers name={name} />
           <Nearby />
           <Grid>
             <Area />

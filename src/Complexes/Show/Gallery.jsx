@@ -1,9 +1,8 @@
-// @flow
-
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
-import { getImageUrl } from '../../Utils';
+import { getImageUrl } from '../../utilities';
+import type { ImagesType } from '../types';
 
 const Slider = styled.div`
   display: flex;
@@ -27,14 +26,14 @@ const Button = styled.button`
 `;
 
 type Props = {
-  imageIds: Array<string>
+  images: Array<ImagesType>,
 };
 
 export default (props: Props) =>
   (<div>
     <Slider>
-      {props.imageIds.map(id =>
-        <img key={id} src={getImageUrl(id)} alt="Slider" height="400px" />,
+      {props.images.map(image =>
+        <img src={getImageUrl(image.id, 512)} key={image.id} alt="SliderPhoto" />,
       )}
     </Slider>
     <Grid>

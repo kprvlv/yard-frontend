@@ -7,11 +7,10 @@ import BodyClassName from 'react-body-classname';
 import MainLogo from './MainLogo';
 import Description from './Description';
 import Card from './Card';
-import { getImageUrl } from '../../Utils';
-import { get } from '../../Api';
-import type { Complex, Location } from '../types';
+import { get } from '../../apiUrl';
+import type { ComplexType, LocationType } from '../types';
 
-function formatLocation({ subLocalityName, street, house }: Location): string {
+function formatLocation({ subLocalityName, street, house }: LocationType): string {
   return [subLocalityName, street, house]
     .filter(item => !!item)
     .join(', ');
@@ -22,7 +21,7 @@ class List extends Component {
     complexes: [],
   };
   state: {
-    complexes: Array<Complex>,
+    complexes: Array<ComplexType>,
   };
 
   componentDidMount() {
@@ -30,7 +29,7 @@ class List extends Component {
       this.setState({ complexes });
     });
   }
-  complexes: Array<Complex>;
+  complexes: Array<ComplexType>;
 
   render() {
     const { complexes = [] } = this.state;
@@ -46,8 +45,10 @@ class List extends Component {
                 id={complex.id}
                 location={formatLocation(complex.location)}
                 title={complex.name}
-                imageUrl={getImageUrl(complex.images[0].id)}
-              />),
+                img={complex.images[0].id}
+              >
+                {complex.shortDescription}
+              </Card>),
             )}
           </Grid>
         </div>

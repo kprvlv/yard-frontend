@@ -59,17 +59,20 @@ const Text = styled.p`
 
 type Props = {
   id: number,
-  imageUrl: string,
   location: string,
+  img: string,
   title: string,
+  children: Element;
 };
 
-export default (props: Props) =>
-  (<Card to={`/complex/${props.id}`}>
-    <Image src={props.imageUrl} />
+export default ({ id, img, location, title, children }: Props) =>
+  (<Card to={`/complex/${id}`}>
+    <Image
+      src={img}
+    />
     <Description>
-      <Location>{props.location}</Location>
-      <Title>{props.title}</Title>
-      <Text />
+      <Location>{location}</Location>
+      <Title>{title}</Title>
+      <Text>{children}</Text>
     </Description>
   </Card>);

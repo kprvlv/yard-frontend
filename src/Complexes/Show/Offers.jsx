@@ -77,10 +77,14 @@ const ListButton = styled.button`
   margin-top: 8px;
 `;
 
-export default () => (
+type Props = {
+  name: string,
+};
+
+export default (props: Props) => (
   <Background>
     <Grid>
-      <Title>Предложения в ЖК «Полянка/44»</Title>
+      <Title>Предложения в {props.name} </Title>
       <Row>
         <Col xs={4}>
           <ListWrapper>

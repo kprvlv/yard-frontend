@@ -2,6 +2,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import Pluralizer from './Pluralizer';
+import type { DetailsType } from './../types';
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,19 +37,28 @@ const Text = styled.small`
   margin-bottom: 24px;
 `;
 
-export default () => (
-  <Wrapper>
-    <Title>
-        950
-        <Text>предложений</Text>
-    </Title>
-    <Title>
-        John McAslan + Partners
+type Props = {
+  units: number,
+  details: DetailsType,
+};
+
+export default ({ units, details }: Props) =>
+  (<Wrapper>
+    {units > 0 &&
+      <Title>
+        {units}
+        <Text>
+          <Pluralizer numeral={units} one="предложение" few="предложения" other="предложений" />
+        </Text>
+      </Title>}
+    {details.architect &&
+      <Title>
+        {details.architect}
         <Text>архитектор</Text>
-    </Title>
-    <Title>
-        Группа «ПСН»
+      </Title>}
+    {details.developer &&
+      <Title>
+        {details.developer}
         <Text>застройщик</Text>
-    </Title>
-  </Wrapper>
-  );
+      </Title>}
+  </Wrapper>);
